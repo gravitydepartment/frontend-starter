@@ -17,7 +17,8 @@
 // See: https://github.com/mikaelbr/gulp-notify/issues/81
 // See: https://github.com/terinjokes/gulp-uglify/blob/master/docs/why-use-pump/README.md
 
-var gutil  = require('gulp-util');
+var beeper = require('beeper');
+var color  = require('ansi-colors');
 var notify = require('gulp-notify');
 
 module.exports = function (error) {
@@ -28,25 +29,24 @@ module.exports = function (error) {
         // ----------------------------------------------
         // Normalize error responses
 
-        var chalk  = gutil.colors.red;
         var report = ['\n'];
         var notifyMessage = '';
 
         if (error.plugin == 'gulp-eslint') {
-            report.push(chalk('Plugin: ') + error.plugin     + '\n');
-            report.push(chalk('File:   ') + error.fileName   + '\n');
-            report.push(chalk('Line:   ') + error.lineNumber + '\n');
-            report.push(chalk('Note:   ') + error.message    + '\n');
+            report.push(color.red('Plugin: ') + error.plugin     + '\n');
+            report.push(color.red('File:   ') + error.fileName   + '\n');
+            report.push(color.red('Line:   ') + error.lineNumber + '\n');
+            report.push(color.red('Note:   ') + error.message    + '\n');
 
             notifyMessage = 'JS linter found errors.';
         }
 
         if (error.plugin === 'gulp-sass') {
-            report.push(chalk('Plugin: ') + error.plugin          + '\n');
-            report.push(chalk('File:   ') + error.relativePath    + '\n');
-            report.push(chalk('Line:   ') + error.line            + '\n');
-            report.push(chalk('Column: ') + error.column          + '\n');
-            report.push(chalk('Note:   ') + error.messageOriginal + '\n');
+            report.push(color.red('Plugin: ') + error.plugin          + '\n');
+            report.push(color.red('File:   ') + error.relativePath    + '\n');
+            report.push(color.red('Line:   ') + error.line            + '\n');
+            report.push(color.red('Column: ') + error.column          + '\n');
+            report.push(color.red('Note:   ') + error.messageOriginal + '\n');
 
             notifyMessage = error.relativePath + '\n' + error.line + ' : ' + error.column;
         }
@@ -56,12 +56,12 @@ module.exports = function (error) {
         }
 
         if (error.plugin === 'gulp-uglify') {
-            report.push(chalk('Plugin: ') + error.plugin         + '\n');
-            report.push(chalk('Path:   ') + error.fileName       + '\n');
-            report.push(chalk('File:   ') + error.cause.filename + '\n');
-            report.push(chalk('Line:   ') + error.cause.line     + '\n');
-            report.push(chalk('Column: ') + error.cause.col      + '\n');
-            report.push(chalk('Note:   ') + error.cause.message  + '\n');
+            report.push(color.red('Plugin: ') + error.plugin         + '\n');
+            report.push(color.red('Path:   ') + error.fileName       + '\n');
+            report.push(color.red('File:   ') + error.cause.filename + '\n');
+            report.push(color.red('Line:   ') + error.cause.line     + '\n');
+            report.push(color.red('Column: ') + error.cause.col      + '\n');
+            report.push(color.red('Note:   ') + error.cause.message  + '\n');
 
             notifyMessage = error.cause.filename + '\n' + error.cause.line + ' : ' + error.cause.col;
         }
@@ -80,6 +80,6 @@ module.exports = function (error) {
             sound:   'Sosumi' // Sound for Mac. See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
         }).write(error);
 
-        gutil.beep(); // Fallback to system sound (for Windows).
+        beeper(); // Fallback to system sound (for Windows).
     }
 };
