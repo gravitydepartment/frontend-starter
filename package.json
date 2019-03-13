@@ -1,0 +1,33 @@
+{
+  "name": "frontend-starter",
+  "description": "A simple HTML + CSS + JS baseline with Gulp build tools.",
+  "version": "0.0.1",
+  "author": "Brendan Falkowski",
+  "license": "All rights reserved.",
+  "private": true,
+  "repository": "github:gravitydepartment/frontend-starter",
+  "browserslist": [
+    "last 2 versions",
+    ">1%"
+  ],
+  "devDependencies": {
+    "del": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "5.0.0",
+    "gulp-changed": "3.2.0",
+    "gulp-concat": "2.6.1",
+    "gulp-eslint": "5.0.0",
+    "gulp-if": "2.0.2",
+    "gulp-imagemin": "4.1.0",
+    "gulp-notify": "3.2.0",
+    "gulp-sass": "4.0.1",
+    "gulp-sourcemaps": "2.6.4",
+    "gulp-stylelint": "7.0.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-util": "3.0.8",
+    "minimist": "1.2.0",
+    "pump": "3.0.0",
+    "stylelint": "9.3.0",
+    "stylelint-scss": "3.4.4"
+  }
+}
