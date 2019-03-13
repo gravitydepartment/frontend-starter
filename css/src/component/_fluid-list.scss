@@ -1,0 +1,173 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-fluid-list-2-columns: 500px  !default;
+$bp-fluid-list-3-columns: 800px  !default;
+$bp-fluid-list-4-columns: 1000px !default;
+
+$fluid-list-spacer-s:    ($gutter / 2) !default;
+$fluid-list-spacer-base: ($gutter * 1) !default;
+$fluid-list-spacer-l:    ($gutter * 2) !default;
+$fluid-list-spacer-xl:   ($gutter * 3) !default;
+
+
+// ==============================================
+// Fluid List
+// ==============================================
+
+.fluid-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + #{$fluid-list-spacer-base});
+    margin: ($fluid-list-spacer-base * -1) ($fluid-list-spacer-base / -2) $gap;
+}
+
+
+// ==============================================
+// Fluid List - Item
+// ==============================================
+
+.fluid-list_item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: $fluid-list-spacer-base;
+    padding-right: ($fluid-list-spacer-base / 2);
+    padding-left: ($fluid-list-spacer-base / 2);
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-fluid-list-2-columns) {
+
+    .fluid-list_item {
+        width: 50%;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-fluid-list-3-columns) {
+
+    .fluid-list--3 .fluid-list_item,
+    .fluid-list--4 .fluid-list_item {
+        width: 33.33%;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-fluid-list-4-columns) {
+
+    .fluid-list--4 .fluid-list_item {
+        width: 25%;
+    }
+
+}
+
+
+// ==============================================
+// Fluid List - Misc.
+// ==============================================
+
+.fluid-list_item > *:last-child {
+    margin-bottom: 0;
+}
+
+// Center image only when text is centered
+.fluid-list_item.text-center img {
+    margin: 0 auto;
+}
+
+
+// ==============================================
+// Modifier: Center
+// ==============================================
+
+.fluid-list--center {
+    justify-content: center;
+}
+
+
+// ==============================================
+// Modifier: Spacer 0
+// ==============================================
+
+.fluid-list--spacer-0 {
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.fluid-list--spacer-0 .fluid-list_item {
+    margin-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+// ==============================================
+// Modifier: Spacer Small
+// ==============================================
+
+.fluid-list--spacer-s {
+    width: calc(100% + #{$fluid-list-spacer-s});
+    margin-top: ($fluid-list-spacer-s * -1);
+    margin-right: ($fluid-list-spacer-s / -2);
+    margin-left:  ($fluid-list-spacer-s / -2);
+}
+
+.fluid-list--spacer-s .fluid-list_item {
+    margin-top: $fluid-list-spacer-s;
+    padding-right: ($fluid-list-spacer-s / 2);
+    padding-left:  ($fluid-list-spacer-s / 2);
+}
+
+
+// ==============================================
+// Modifier: Spacer Large
+// ==============================================
+
+.fluid-list--spacer-l {
+    margin-top: ($fluid-list-spacer-l * -1);
+    width: calc(100% + #{$fluid-list-spacer-l});
+    margin-right: ($fluid-list-spacer-l / -2);
+    margin-left:  ($fluid-list-spacer-l / -2);
+}
+
+.fluid-list--spacer-l .fluid-list_item {
+    margin-top: $fluid-list-spacer-l;
+    padding-right: ($fluid-list-spacer-l / 2);
+    padding-left:  ($fluid-list-spacer-l / 2);
+}
+
+
+// ==============================================
+// Modifier: Spacer Extra Large
+// ==============================================
+
+.fluid-list--spacer-xl {
+    margin-top: ($fluid-list-spacer-xl * -1);
+    width: calc(100% + #{$fluid-list-spacer-xl});
+    margin-right: ($fluid-list-spacer-xl / -2);
+    margin-left:  ($fluid-list-spacer-xl / -2);
+}
+
+.fluid-list--spacer-xl .fluid-list_item {
+    margin-top: $fluid-list-spacer-xl;
+    padding-right: ($fluid-list-spacer-xl / 2);
+    padding-left:  ($fluid-list-spacer-xl / 2);
+}

@@ -1,0 +1,57 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Media
+// ==============================================
+
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+
+// ----------------------------------------------
+// Modifier: Center
+
+.media--center {
+    align-items: center;
+}
+
+// ----------------------------------------------
+// Modifier: Flip
+
+.media--flip {
+    flex-direction: row-reverse;
+}
+
+
+// ==============================================
+// Media - Item
+// ==============================================
+
+.media_item {
+    margin-right: 15px;
+}
+
+// ----------------------------------------------
+// Parent Modifier: Flip
+
+.media--flip .media_item {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+
+// ==============================================
+// Media - Body
+// ==============================================
+
+.media_body {
+    flex: 1;
+}

@@ -1,0 +1,92 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$image-list-item-max-width: 250px !default;
+
+
+// ==============================================
+// Image List
+// ==============================================
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: ($gutter * -1);
+    margin-bottom: $gap;
+    margin-left: ($gutter * -1);
+}
+
+
+// ==============================================
+// Image List - Item
+// ==============================================
+
+.image-list_item {
+    position: relative;
+    flex: 1 0 170px;
+    max-width: $image-list-item-max-width;
+    margin-top:  $gutter;
+    margin-left: $gutter;
+}
+
+// ----------------------------------------------
+
+@media (max-width: 420px) {
+
+    // Force 2-columns on small screens.
+    .image-list_item {
+        flex: 1 0 120px;
+    }
+
+}
+
+
+// ==============================================
+// Image List - Name
+// ==============================================
+
+.image-list_name {
+    display: block;
+    margin-top: 0.75em;
+    font-size: $font-size-s;
+    line-height: $line-height-xs;
+    text-align: center;
+}
+
+
+// ==============================================
+// Modifier: Solid
+// ==============================================
+
+.image-list--solid {
+    justify-content: center;
+}
+
+.image-list--solid .image-list_item {
+    flex: 0 0 170px; // Don't grow to fill area
+}
+
+.image-list--solid .flex-ghost {
+    display: none; // Must be removed for centering to work
+}
+
+// ----------------------------------------------
+
+@media (max-width: 400px) {
+
+    // Force 2-columns on small screens.
+    .image-list--solid .image-list_item {
+        flex: 1 0 120px; // Grow to fill
+    }
+
+}

@@ -1,0 +1,29 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Text Align
+// ==============================================
+
+.text-center  { text-align: center  !important; }
+.text-justify { text-align: justify !important; }
+.text-left    { text-align: left    !important; }
+.text-right   { text-align: right   !important; }
+
+
+// ==============================================
+// Vertical Align
+// ==============================================
+
+.align-bottom { vertical-align: bottom !important; }
+.align-middle { vertical-align: middle !important; }
+.align-top    { vertical-align: top    !important; }

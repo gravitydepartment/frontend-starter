@@ -1,0 +1,29 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$social-icons-spacer: 8px !default;
+
+
+// ==============================================
+// Social List
+// ==============================================
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: ($social-icons-spacer * -1) 0 $gap ($social-icons-spacer * -1);
+}
+
+.social-icons .social-icon {
+    margin: $social-icons-spacer 0 0 $social-icons-spacer;
+}

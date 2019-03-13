@@ -1,0 +1,101 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-h1: $c-text-base !default;
+$c-h2: $c-text-base !default;
+$c-h3: $c-text-base !default;
+$c-h4: $c-text-base !default;
+$c-h5: $c-text-base !default;
+$c-h6: $c-text-base !default;
+
+
+// ==============================================
+// Mixin - Typography
+// ==============================================
+
+@mixin h1 {
+    margin-bottom: 0.6em;
+    color: $c-h1;
+    font-family: $font-family-sans;
+    font-size: $font-size-xxxxl;
+    font-weight: bold;
+    font-style: normal;
+    line-height: $line-height-xxs;
+    text-transform: none;
+}
+
+@mixin h2 {
+    margin-bottom: 0.75em;
+    color: $c-h2;
+    font-family: $font-family-sans;
+    font-size: $font-size-xxxl;
+    font-weight: bold;
+    font-style: normal;
+    line-height: $line-height-xxs;
+    text-transform: none;
+}
+
+@mixin h3 {
+    margin-bottom: 10px;
+    color: $c-h3;
+    font-family: $font-family-sans;
+    font-size: $font-size-xl;
+    font-weight: bold;
+    font-style: normal;
+    line-height: $line-height-s;
+    text-transform: none;
+}
+
+@mixin h4 {
+    margin-bottom: 10px;
+    color: $c-h4;
+    font-family: $font-family-sans;
+    font-size: $font-size-l;
+    font-weight: bold;
+    font-style: normal;
+    line-height: $line-height-s;
+    text-transform: none;
+}
+
+@mixin h5 {
+    margin-bottom: 10px;
+    color: $c-h5;
+    font-family: $font-family-sans;
+    font-size: $font-size-s;
+    font-weight: bold;
+    font-style: normal;
+    line-height: $line-height-s;
+    text-transform: uppercase;
+}
+
+@mixin h6 {
+    margin-bottom: 5px;
+    color: $c-h6;
+    font-family: $font-family-sans;
+    font-size: $font-size-xs;
+    font-weight: bold;
+    font-style: normal;
+    line-height: $line-height-s;
+    text-transform: uppercase;
+}
+
+@mixin text {
+    margin-bottom: 0;
+    color: $c-text-base;
+    font-family: $font-family-sans;
+    font-size: $font-size-base;
+    font-weight: normal;
+    font-style: normal;
+    line-height: $line-height-base;
+    text-transform: none;
+}

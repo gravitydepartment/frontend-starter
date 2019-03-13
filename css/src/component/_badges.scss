@@ -1,0 +1,29 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$badges-spacer: 5px !default;
+
+
+// ==============================================
+// Badges
+// ==============================================
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    margin: ($badges-spacer * -1) 0 $margin-bottom ($badges-spacer * -1);
+}
+
+.badges .badge {
+    margin: $badges-spacer 0 0 $badges-spacer;
+}

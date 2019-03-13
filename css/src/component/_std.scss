@@ -1,0 +1,84 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$std-max-width: 45rem !default;
+
+
+// ==============================================
+// Standard Text Formatting
+// ==============================================
+
+.std {
+    max-width: $std-max-width;
+}
+
+
+// ==============================================
+// Definition List
+// ==============================================
+
+.std dl {
+    margin-bottom: $margin-bottom;
+}
+
+.std dl dt {
+    margin-top: ($margin-bottom / 2);
+    font-size: $font-size-s;
+    font-weight: bold;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.std dl dd {
+    margin-left: 1.25em;
+}
+
+
+// ==============================================
+// Ordered List
+// ==============================================
+
+.std ol {
+    list-style: decimal outside;
+    margin-bottom: $margin-bottom;
+}
+
+.std ol li {
+    margin-bottom: 0.3em;
+    margin-left: 2em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// ==============================================
+// Unordered List
+// ==============================================
+
+.std ul {
+    list-style: disc outside;
+    margin-bottom: $margin-bottom;
+}
+
+.std ul li {
+    margin-bottom: 0.3em;
+    margin-left: 2em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

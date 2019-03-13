@@ -1,0 +1,45 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$remove-link-icon-size: 15px !default;
+
+
+// ==============================================
+// Remove Link
+// ==============================================
+
+.remove-link {
+    position: relative;
+    display: inline-block;
+    padding-left: ($remove-link-icon-size + 5px);
+    color: $c-text-subtle;
+    font-size: $font-size-xs;
+
+    &:hover {
+        color: $c-danger;
+    }
+
+    &::before {
+        @include svg (remove-link);
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: $remove-link-icon-size;
+        height: $remove-link-icon-size;
+    }
+
+    &:hover::before  {
+        @include svg (remove-link-hover);
+    }
+}

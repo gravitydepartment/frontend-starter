@@ -1,0 +1,186 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-switcher-background-off:  #D0D0D0  !default;
+$c-switcher-background-on:   $c-green !default;
+$c-switcher-knob-background: #FFF !default;
+$c-switcher-status-off:      #707070  !default;
+$c-switcher-status-on:       $c-green !default;
+
+$switcher-height: 40px !default;
+$switcher-width:  70px !default;
+
+$switcher-knob-scale-off: 0.65 !default;
+$switcher-knob-scale-on:  1    !default;
+$switcher-knob-size:      30px !default;
+$switcher-knob-spacer: (($switcher-height - $switcher-knob-size) / 2) !default;
+
+$switcher-status-font-size: 10px !default;
+
+
+// ==============================================
+// Switcher
+// ==============================================
+
+.switcher {
+    display: flex;
+    align-items: center;
+    width: 100%; // Prevent text in prefix/suffix from always wrapping
+}
+
+// ----------------------------------------------
+// Modifier: Center
+
+.switcher--center {
+    justify-content: center;
+}
+
+
+// ==============================================
+// Switcher - Prefix
+// ==============================================
+
+.switcher_prefix {
+    margin-right: 1em;
+}
+
+
+// ==============================================
+// Switcher - Checkbox
+// ==============================================
+
+.switcher_checkbox {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+
+// ==============================================
+// Switcher - Label
+// ==============================================
+
+.switcher_label {
+    display: block;
+    position: relative;
+    flex: 0 0 $switcher-width; // Force size to be retained
+    height: $switcher-height;
+    border: 0;
+    border-radius: $switcher-height;
+    box-shadow: inset 0 2px 6px 0 black(0.3);
+    transition: all 150ms cubic-bezier(0.165, 0.84, 0.44, 1); // easeOutQuart
+}
+
+.switcher_label,
+.switcher_label * {
+    cursor: pointer;
+}
+
+// Focus
+.switcher_checkbox:focus + .switcher_label {
+    @include focus;
+}
+
+// State: Off
+.switcher_checkbox:not(:checked) + .switcher_label {
+    background: $c-switcher-background-off;
+}
+
+// State: On
+.switcher_checkbox:checked + .switcher_label {
+    background: $c-switcher-background-on;
+}
+
+
+// ==============================================
+// Switcher - Knob
+// ==============================================
+
+.switcher_knob {
+    position: absolute;
+    top: $switcher-knob-spacer;
+    left: $switcher-knob-spacer;
+    width: $switcher-knob-size;
+    height: $switcher-knob-size;
+    border-radius: $switcher-knob-size;
+    background: $c-switcher-knob-background;
+    box-shadow: 0 2px 2px 0 black(0.3);
+    transition: transform 150ms cubic-bezier(0.165, 0.84, 0.44, 1); // easeOutQuart
+}
+
+// State: On
+.switcher_checkbox:checked + .switcher_label .switcher_knob {
+    transform: translateX($switcher-width - $switcher-knob-spacer - $switcher-knob-size - $switcher-knob-spacer);
+}
+
+// State: Off
+.switcher_checkbox:not(:checked) + .switcher_label .switcher_knob {
+    transform: translateX(0) scale($switcher-knob-scale-off);
+}
+
+
+// ==============================================
+// Switcher - Status
+// ==============================================
+
+.switcher_status {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: $switcher-status-font-size;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: $switcher-height;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+
+// ==============================================
+// Switcher - Status Off
+// ==============================================
+
+// State: Off
+.switcher_status-off {
+    color: $c-switcher-status-off;
+}
+
+// State: On
+.switcher_checkbox:checked + .switcher_label .switcher_status-off {
+    display: none;
+}
+
+
+// ==============================================
+// Switcher - Status On
+// ==============================================
+
+// State: On
+.switcher_status-on {
+    color: $c-switcher-status-on;
+}
+
+// State: Off
+.switcher_checkbox:not(:checked) + .switcher_label .switcher_status-on {
+    display: none;
+}
+
+
+// ==============================================
+// Switcher - Suffix
+// ==============================================
+
+.switcher_suffix {
+    margin-left: 1em;
+}

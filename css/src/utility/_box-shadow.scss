@@ -1,0 +1,28 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Box Shadow
+// ==============================================
+
+.box-shadow {
+    box-shadow: $box-shadow-base !important;
+}
+
+
+// ==============================================
+// Box Shadow Inset
+// ==============================================
+
+.box-shadow-inset {
+    box-shadow: $box-shadow-inset !important;
+}

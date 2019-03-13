@@ -1,0 +1,56 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Tabs
+// ==============================================
+
+.tabs {
+    margin-bottom: $gap;
+}
+
+
+// ==============================================
+// Tabs - Nav
+// ==============================================
+
+.tabs_nav {
+    &::after {
+        @include clearfix;
+    }
+}
+
+
+// ==============================================
+// Tabs - Nav Link
+// ==============================================
+
+.tabs_nav-link {
+    position: relative;
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+
+
+// ==============================================
+// Tabs - Item
+// ==============================================
+
+.tabs_item {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}
+
+.tabs_item > *:last-child {
+    margin-bottom: 0;
+}

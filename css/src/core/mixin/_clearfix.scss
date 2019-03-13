@@ -1,0 +1,18 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Clearfix
+// ==============================================
+
+@mixin clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}

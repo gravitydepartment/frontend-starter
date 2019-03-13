@@ -1,0 +1,24 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Site Overlay Active
+// ==============================================
+
+@mixin site-overlay-active {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+    // Animate in
+    transition:
+        width 0ms ease-out,
+        height 0ms ease-out,
+        opacity 250ms ease-out;
+}

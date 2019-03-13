@@ -1,0 +1,55 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Flex Center
+// ==============================================
+
+// Used on a parent to visually center the child element(s).
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// ==============================================
+// Flex Ghost
+// See: https://codepen.io/brendanfalkowski/pen/pebayb
+// ==============================================
+
+// Used as a direct child of a `display: flex` parent with `flex-wrap: wrap`,
+// add as many instances of this element as (n-1) items fit along the main axis.
+// This prevents an uneven number of items on the last row/column from being
+// distributed unlike other rows/columns.
+
+.flex-ghost {
+    height:         0 !important;
+    margin-top:     0 !important;
+    margin-bottom:  0 !important;
+    padding-top:    0 !important;
+    padding-bottom: 0 !important;
+    border:         0 !important;
+}
+
+
+// ==============================================
+// Flex Spacer
+// ==============================================
+
+// Used as a direct child of a `display: flex` parent, this element expands to fill
+// the available space along the main axis.
+
+.flex-spacer {
+    flex: 1;
+}

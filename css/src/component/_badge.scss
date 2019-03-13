@@ -1,0 +1,60 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-badge-new:  $c-green     !default;
+$c-badge-sale: $c-blue-base !default;
+
+$c-badge-cancelled:  $c-red       !default;
+$c-badge-closed:     $c-red       !default;
+$c-badge-complete:   $c-green     !default;
+$c-badge-pending:    $c-blue-base !default;
+$c-badge-processing: $c-blue-base !default;
+
+
+// ==============================================
+// Badge
+// ==============================================
+
+.badge {
+    display: inline-block;
+    padding: 0 5px;
+    border-radius: $radius-s;
+    background: $c-action-secondary-base;
+    color: #FFF;
+    font-size: $font-size-xxs;
+    letter-spacing: 1px;
+    line-height: 18px;
+    text-shadow: 0 1px 1px black(0.25);
+    text-transform: uppercase;
+}
+
+// ----------------------------------------------
+// Modifier: Color
+
+// UI States
+.badge--danger   { background: $c-danger; }
+.badge--help     { background: $c-help; }
+.badge--info     { background: $c-info; }
+.badge--success  { background: $c-success; }
+.badge--warn     { background: $c-warn; }
+
+// Products
+.badge--new  { background: $c-badge-new; }
+.badge--sale { background: $c-badge-sale; }
+
+// Orders
+.badge--cancelled  { background: $c-badge-cancelled; }
+.badge--closed     { background: $c-badge-closed; }
+.badge--complete   { background: $c-badge-complete; }
+.badge--pending    { background: $c-badge-pending; }
+.badge--processing { background: $c-badge-processing; }

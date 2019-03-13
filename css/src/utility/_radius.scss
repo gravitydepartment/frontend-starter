@@ -1,0 +1,60 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Radius Size
+// ==============================================
+
+.radius-0 {
+    border-radius: 0 !important;
+}
+
+.radius-s {
+    border-radius: $radius-s !important;
+}
+
+.radius-base {
+    border-radius: $radius-base !important;
+}
+
+.radius-l {
+    border-radius: $radius-l !important;
+}
+
+.radius-circle {
+    border-radius: 50% !important;
+}
+
+
+// ==============================================
+// Radius Edge
+// ==============================================
+
+.radius-top {
+    border-top-right-radius: $radius-base !important;
+    border-top-left-radius:  $radius-base !important;
+}
+
+.radius-right {
+    border-top-right-radius:    $radius-base !important;
+    border-bottom-right-radius: $radius-base !important;
+}
+
+.radius-bottom {
+    border-bottom-right-radius: $radius-base !important;
+    border-bottom-left-radius:  $radius-base !important;
+}
+
+.radius-left {
+    border-top-left-radius:    $radius-base !important;
+    border-bottom-left-radius: $radius-base !important;
+}

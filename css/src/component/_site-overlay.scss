@@ -1,0 +1,41 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-site-overlay-background: black(0.3) !default;
+
+
+// ==============================================
+// Site Overlay
+// ==============================================
+
+// Cover the content area when offscreen "nav" is open.
+// This prevents clicks on links/buttons and creates visual separation.
+
+.site-overlay {
+    position: fixed; // Always overlaying content
+    top: 0;
+    left: 0;
+    z-index: $z-offscreen-backdrop;
+    width: 0;  // Zero physical space
+    height: 0; // Zero physical space
+    background: $c-site-overlay-background;
+    opacity: 0;
+    will-change: opacity;
+    cursor: pointer;
+
+    // Animate out
+    transition:
+        width 0ms ease-in 200ms,
+        height 0ms ease-in 200ms,
+        opacity 200ms ease-in;
+}

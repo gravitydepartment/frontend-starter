@@ -1,0 +1,144 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-poster: 675px !default;
+
+
+// ==============================================
+// Poster
+// ==============================================
+
+.poster {
+    overflow: hidden;
+    margin-top: ($gutter * -1);
+    margin-bottom: $gap;
+    margin-left: ($gutter * -1);
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-poster) {
+
+    .poster {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+
+// ==============================================
+// Poster - Item
+// ==============================================
+
+.poster_item {
+    margin-top: $gutter;
+    margin-left: $gutter;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-poster) {
+
+    .poster_item {
+        flex: 0 0 auto;
+        width: calc(50% - #{$gutter});
+    }
+
+}
+
+
+// ==============================================
+// Poster - Link
+// ==============================================
+
+.poster_link {
+    position: relative;
+    display: block;
+    background: #D0D0D0;
+    border-radius: $radius-base;
+    color: $c-text-base;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+.no-touchevents .poster_link {
+    // Pseudo border
+    &:focus::before,
+    &:hover::before {
+        content: '';
+        position: absolute;
+        z-index: $z-image-border;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 5px solid rgba($c-action-primary-base, 0.5);
+        border-radius: $radius-base;
+    }
+}
+
+
+// ==============================================
+// Poster - Details
+// ==============================================
+
+.poster_details {
+    position: absolute;
+    top: $gutter;
+    left: $gutter;
+}
+
+
+// ==============================================
+// Poster - Subtitle
+// ==============================================
+
+.poster_subtitle {
+    margin-bottom: $space-xxs;
+}
+
+
+// ==============================================
+// Poster - Title
+// ==============================================
+
+.poster_title {
+    margin-bottom: $space-xxs;
+    font-size: $font-size-xxl;
+    font-weight: bold;
+    line-height: 1;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-poster) {
+
+    .poster_title {
+        font-size: $font-size-xxxl;
+    }
+
+}
+
+
+// ==============================================
+// Poster - Image
+// ==============================================
+
+.poster_image {
+    width: 100%;
+    border-radius: $radius-base;
+}

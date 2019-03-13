@@ -1,0 +1,140 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-strap-black-base:   #202020 !default;
+$c-strap-black-hover:  lighten(#202020, 12%) !default;
+
+$c-strap-blue-base:    $c-blue-base !default;
+$c-strap-blue-hover:   darken($c-blue-base, 8%) !default;
+
+$c-strap-green-base:   $c-green !default;
+$c-strap-green-hover:  darken($c-green, 8%) !default;
+
+$c-strap-yellow-base:  $c-yellow-base !default;
+$c-strap-yellow-hover: lighten($c-yellow-base, 8%) !default;
+
+
+// ==============================================
+// Strap
+// ==============================================
+
+.strap {
+    display: block;
+    padding: 12px $trim-base;
+    background: $c-strap-black-base;
+    color: #FFF;
+    line-height: $line-height-xxs;
+    text-align: center;
+}
+
+// ----------------------------------------------
+
+@media (min-width: 750px) {
+
+    .strap {
+        font-size: $font-size-l;
+        font-weight: 300;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media print {
+
+    .strap {
+        display: none;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Link
+// ==============================================
+
+.strap--link {
+    &:hover {
+        background: $c-strap-black-hover;
+        color: #FFF;
+    }
+
+    &:focus,
+    &:active {
+        color: #FFF;
+    }
+}
+
+
+// ==============================================
+// Modifier: Image
+// ==============================================
+
+.strap--image {
+    padding: 0;
+}
+
+.strap--image img {
+    margin: 0 auto;
+}
+
+
+// ==============================================
+// Modifier: Color
+// ==============================================
+
+// ----------------------------------------------
+// Blue
+
+.strap--blue {
+    background: $c-strap-blue-base;
+}
+
+.strap--link.strap--blue {
+    &:hover {
+        background: $c-strap-blue-hover;
+    }
+}
+
+// ----------------------------------------------
+// Green
+
+.strap--green {
+    background: $c-strap-green-base;
+}
+
+.strap--link.strap--green {
+    &:hover {
+        background: $c-strap-green-hover;
+    }
+}
+
+// ----------------------------------------------
+// Yellow
+
+.strap--yellow {
+    background: $c-strap-yellow-base;
+    color: $c-text-base;
+}
+
+.strap--link.strap--yellow {
+    &:hover {
+        background: $c-strap-yellow-hover;
+        color: $c-text-base;
+    }
+
+    &:focus,
+    &:active {
+        color: $c-text-base;
+    }
+}

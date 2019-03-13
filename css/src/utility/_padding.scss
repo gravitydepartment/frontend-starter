@@ -1,0 +1,179 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Padding
+// ==============================================
+
+.p-0 { padding: 0 !important; }
+
+// ----------------------------------------------
+// Top
+
+.p-t-xxxl { padding-top: $space-xxxl !important; }
+.p-t-xxl  { padding-top: $space-xxl  !important; }
+.p-t-xl   { padding-top: $space-xl   !important; }
+.p-t-l    { padding-top: $space-l    !important; }
+.p-t-base { padding-top: $space-base !important; }
+.p-t-s    { padding-top: $space-s    !important; }
+.p-t-xs   { padding-top: $space-xs   !important; }
+.p-t-xxs  { padding-top: $space-xxs  !important; }
+.p-t-xxxs { padding-top: $space-xxxs !important; }
+.p-t-0    { padding-top: 0           !important; }
+
+// ----------------------------------------------
+// Right
+
+.p-r-xxxl { padding-right: $space-xxxl !important; }
+.p-r-xxl  { padding-right: $space-xxl  !important; }
+.p-r-xl   { padding-right: $space-xl   !important; }
+.p-r-l    { padding-right: $space-l    !important; }
+.p-r-base { padding-right: $space-base !important; }
+.p-r-s    { padding-right: $space-s    !important; }
+.p-r-xs   { padding-right: $space-xs   !important; }
+.p-r-xxs  { padding-right: $space-xxs  !important; }
+.p-r-xxxs { padding-right: $space-xxxs !important; }
+.p-r-0    { padding-right: 0           !important; }
+
+// ----------------------------------------------
+// Bottom
+
+.p-b-xxxl { padding-bottom: $space-xxxl !important; }
+.p-b-xxl  { padding-bottom: $space-xxl  !important; }
+.p-b-xl   { padding-bottom: $space-xl   !important; }
+.p-b-l    { padding-bottom: $space-l    !important; }
+.p-b-base { padding-bottom: $space-base !important; }
+.p-b-s    { padding-bottom: $space-s    !important; }
+.p-b-xs   { padding-bottom: $space-xs   !important; }
+.p-b-xxs  { padding-bottom: $space-xxs  !important; }
+.p-b-xxxs { padding-bottom: $space-xxxs !important; }
+.p-b-0    { padding-bottom: 0           !important; }
+
+// ----------------------------------------------
+// Left
+
+.p-l-xxxl { padding-left: $space-xxxl !important; }
+.p-l-xxl  { padding-left: $space-xxl  !important; }
+.p-l-xl   { padding-left: $space-xl   !important; }
+.p-l-l    { padding-left: $space-l    !important; }
+.p-l-base { padding-left: $space-base !important; }
+.p-l-s    { padding-left: $space-s    !important; }
+.p-l-xs   { padding-left: $space-xs   !important; }
+.p-l-xxs  { padding-left: $space-xxs  !important; }
+.p-l-xxxs { padding-left: $space-xxxs !important; }
+.p-l-0    { padding-left: 0           !important; }
+
+// ----------------------------------------------
+// X (Right + Left)
+
+.p-x-xxxl {
+    padding-right: $space-xxxl !important;
+    padding-left:  $space-xxxl !important;
+}
+
+.p-x-xxl {
+    padding-right: $space-xxl !important;
+    padding-left:  $space-xxl !important;
+}
+
+.p-x-xl {
+    padding-right: $space-xl !important;
+    padding-left:  $space-xl !important;
+}
+
+.p-x-l {
+    padding-right: $space-l !important;
+    padding-left:  $space-l !important;
+}
+
+.p-x-base {
+    padding-right: $space-base !important;
+    padding-left:  $space-base !important;
+}
+
+.p-x-s {
+    padding-right: $space-s !important;
+    padding-left:  $space-s !important;
+}
+
+.p-x-xs {
+    padding-right: $space-xs !important;
+    padding-left:  $space-xs !important;
+}
+
+.p-x-xxs {
+    padding-right: $space-xxs !important;
+    padding-left:  $space-xxs !important;
+}
+
+.p-x-xxxs {
+    padding-right: $space-xxxs !important;
+    padding-left:  $space-xxxs !important;
+}
+
+.p-x-0 {
+    padding-right: 0 !important;
+    padding-left:  0 !important;
+}
+
+// ----------------------------------------------
+// Y (Top + Bottom)
+
+.p-y-xxxl {
+    padding-top:    $space-xxxl !important;
+    padding-bottom: $space-xxxl !important;
+}
+
+.p-y-xxl {
+    padding-top:    $space-xxl !important;
+    padding-bottom: $space-xxl !important;
+}
+
+.p-y-xl {
+    padding-top:    $space-xl !important;
+    padding-bottom: $space-xl !important;
+}
+
+.p-y-l {
+    padding-top:    $space-l !important;
+    padding-bottom: $space-l !important;
+}
+
+.p-y-base {
+    padding-top:    $space-base !important;
+    padding-bottom: $space-base !important;
+}
+
+.p-y-s {
+    padding-top:    $space-s !important;
+    padding-bottom: $space-s !important;
+}
+
+.p-y-xs {
+    padding-top:    $space-xs !important;
+    padding-bottom: $space-xs !important;
+}
+
+.p-y-xxs {
+    padding-top:    $space-xxs !important;
+    padding-bottom: $space-xxs !important;
+}
+
+.p-y-xxxs {
+    padding-top:    $space-xxxs !important;
+    padding-bottom: $space-xxxs !important;
+}
+
+.p-y-0 {
+    padding-top:    0 !important;
+    padding-bottom: 0 !important;
+}

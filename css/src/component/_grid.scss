@@ -1,0 +1,46 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Grid
+// ==============================================
+
+.grid {
+    margin-right: ($gutter * -1);
+    margin-left: ($gutter * -1);
+
+    &::after {
+        @include clearfix;
+    }
+}
+
+[class^='grid_'] {
+    float: left;
+    width: 100%;
+    padding-right: $gutter;
+    padding-left: $gutter;
+}
+
+// ----------------------------------------------
+
+@media (min-width: 800px) {
+
+    .grid_1  { width: percentage(1 / 12); }
+    .grid_2  { width: percentage(2 / 12); }
+    .grid_3  { width: percentage(3 / 12); }
+    .grid_4  { width: percentage(4 / 12); }
+    .grid_5  { width: percentage(5 / 12); }
+    .grid_6  { width: percentage(6 / 12); }
+    .grid_7  { width: percentage(7 / 12); }
+    .grid_8  { width: percentage(8 / 12); }
+    .grid_9  { width: percentage(9 / 12); }
+    .grid_10 { width: percentage(10 / 12); }
+    .grid_11 { width: percentage(11 / 12); }
+
+}

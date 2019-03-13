@@ -1,0 +1,232 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-hero: 750px !default;
+
+$hero-background: #EEE   !default;
+$hero-max-width:  1200px !default;
+
+
+// ==============================================
+// Hero
+// ==============================================
+
+.hero {
+    display: block;
+    position: relative;
+    max-width: $hero-max-width;
+    margin: 0 auto $gap;
+}
+
+
+// ==============================================
+// Hero - Image
+// ==============================================
+
+.hero_image {
+    display: block;
+}
+
+.hero_image img {
+    border-radius: $radius-base;
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-hero - 1px) {
+
+    .hero_image img {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+}
+
+
+// ==============================================
+// Hero - Body
+// ==============================================
+
+.hero_body {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-hero - 1px) {
+
+    .hero_body {
+        position: static;
+        padding: 30px 15px;
+        border-bottom-right-radius: $radius-base;
+        border-bottom-left-radius: $radius-base;
+        background: $hero-background;
+    }
+
+}
+
+
+// ==============================================
+// Hero - Content
+// ==============================================
+
+.hero_content {
+    width: auto;
+}
+
+.hero_content > *:last-child {
+    margin-bottom: 0;
+}
+
+// ----------------------------------------------
+// Modifier: Width
+
+@media (min-width: $bp-hero) {
+
+    .hero--width-33 .hero_content { width: 33.33%; }
+    .hero--width-40 .hero_content { width: 40%; }
+    .hero--width-50 .hero_content { width: 50%; }
+    .hero--width-60 .hero_content { width: 60%; }
+    .hero--width-66 .hero_content { width: 66.66%; }
+    .hero--width-70 .hero_content { width: 70%; }
+    .hero--width-80 .hero_content { width: 80%; }
+    .hero--width-90 .hero_content { width: 90%; }
+
+}
+
+
+// ==============================================
+// Hero - Title
+// ==============================================
+
+.hero_title {
+    margin-bottom: 0.5em;
+    font-size: $font-size-xxxl;
+    line-height: $line-height-xxs;
+}
+
+// ---------------------------------------------
+
+@media (min-width: 1000px) {
+
+    .hero_title {
+        font-size: $font-size-xxxxl;
+    }
+
+}
+
+
+// ==============================================
+// Hero - Text
+// ==============================================
+
+.hero_text {
+    font-size: $font-size-l;
+}
+
+
+// ==============================================
+// Modifier: Left
+// ==============================================
+
+.hero--left .hero_body {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-hero) {
+
+    .hero--left .hero_content {
+        margin-left: 5%;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Right
+// ==============================================
+
+.hero--right .hero_body {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-hero) {
+
+    .hero--right .hero_content {
+        margin-right: 5%;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Shadow
+// ==============================================
+
+@media (min-width: $bp-hero) {
+
+    .hero--shadow .hero_body {
+        background: linear-gradient(to right, black(0), black(0.3), black(0.35), black(0.3), black(0)) no-repeat;
+    }
+
+    .hero--shadow.hero--left .hero_body {
+        background: linear-gradient(to right, black(0.35), black(0.15), black(0)) no-repeat;
+    }
+
+    .hero--shadow.hero--right .hero_body {
+        background: linear-gradient(to left, black(0.35), black(0.15), black(0)) no-repeat;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Text Dark
+// ==============================================
+
+@media (min-width: $bp-hero) {
+
+    .hero--text-dark {
+        color: $c-text-base;
+        text-shadow: 0 2px 2px white(0.25);
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Text Right
+// ==============================================
+
+@media (min-width: $bp-hero) {
+
+    .hero--text-light {
+        color: #FFF;
+        text-shadow: 0 2px 2px black(0.25);
+    }
+
+}

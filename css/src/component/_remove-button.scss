@@ -1,0 +1,49 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$remove-button-size: 24px !default;
+
+
+// ==============================================
+// Remove Button
+// ==============================================
+
+.remove-button {
+    @include image-replacement;
+    position: relative;
+    display: inline-block;
+    width: $remove-button-size;
+    height: $remove-button-size;
+    border-radius: ($remove-button-size / 2);
+    background: $c-action-secondary-base;
+    color: #FFF;
+    line-height: $remove-button-size;
+
+    &:focus {
+        @include focus;
+    }
+
+    &:hover {
+        background: $c-danger;
+    }
+
+    &::before {
+        content: '';
+        @include svg (remove);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $remove-button-size;
+        height: $remove-button-size;
+    }
+}

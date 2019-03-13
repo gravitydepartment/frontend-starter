@@ -1,0 +1,22 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Menu
+// ==============================================
+
+@mixin menu {
+    position: relative;
+    z-index: $z-menu;
+    border-radius: $radius-base;
+    background: $c-background;
+    box-shadow:
+        0 0 0 1px black(0.15),
+        0 2px 7px black(0.35);
+}

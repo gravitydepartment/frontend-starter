@@ -1,0 +1,54 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-facebook:    #3B5998 !default;
+$c-google-plus: #E04B31 !default;
+$c-linkedin:    #0075B6 !default;
+$c-pinterest:   #DE2108 !default;
+$c-tumblr:      #2C4762 !default;
+$c-twitter:     #00ACED !default;
+$c-vimeo:       #1AB7EA !default;
+$c-vk:          #567DA4 !default;
+$c-youtube:     #E52D27 !default;
+$c-weibo:       #EBDBC4 !default;
+
+$social-icon-height: 40px !default;
+$social-icon-width:  40px !default;
+
+
+// ==============================================
+// Social Icon
+// ==============================================
+
+.social-icon {
+    @include image-replacement;
+    display: block;
+    width:  $social-icon-width;
+    height: $social-icon-height;
+    border-radius: $radius-base;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// ----------------------------------------------
+// Modifier: Type
+
+.social-icon--facebook    { @include svg (facebook); }
+.social-icon--google-plus { @include svg (google-plus); }
+.social-icon--pinterest   { @include svg (pinterest); }
+.social-icon--tumblr      { @include svg (tumblr); }
+.social-icon--twitter     { @include svg (twitter); }
+.social-icon--vimeo       { @include svg (vimeo); }
+.social-icon--youtube     { @include svg (youtube); }

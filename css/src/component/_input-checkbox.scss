@@ -1,0 +1,32 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Input Checkbox
+// ==============================================
+
+// ----------------------------------------------
+// Label After Checkbox
+
+[type='checkbox'] + label {
+    font-size: $font-size-base;
+    font-weight: normal;
+    line-height: $line-height-xs;
+}
+
+[type='checkbox'][disabled] + label {
+    color: $c-text-subtle;
+}
+
+// ----------------------------------------------
+// Label Around Checkbox
+
+label > [type='checkbox'] {
+    margin-right: 0.5em;
+}

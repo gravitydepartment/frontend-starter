@@ -1,0 +1,49 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$container-width: 1200px !default;
+$container-max-width: $trim-l + $container-width + $trim-l !default;
+
+
+// ==============================================
+// Container
+// ==============================================
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $trim-base;
+
+    &::after {
+        @include clearfix;
+    }
+}
+
+// ----------------------------------------------
+
+@media (min-width: 900px) {
+
+    .container {
+        padding: 0 $trim-l;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Block
+// ==============================================
+
+.container--block {
+    max-width: none;
+}

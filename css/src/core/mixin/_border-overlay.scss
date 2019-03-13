@@ -1,0 +1,24 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Border Overlay
+// ==============================================
+
+@mixin border-overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-image-border;
+    width: 100%;
+    height: 100%;
+    border: 5px solid $c-action;
+    cursor: pointer;
+}

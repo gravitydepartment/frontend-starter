@@ -1,0 +1,62 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Control
+// ==============================================
+
+.control {
+    position: relative;
+}
+
+.control input {
+    position: absolute;
+    top: 4px;
+}
+
+.control label {
+    padding-left: 24px;
+    font-size: $font-size-base;
+}
+
+// ----------------------------------------------
+// Modifier: Primary
+
+//.control--primary {}
+
+.control--primary input {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+.control--primary label {
+    display: block;
+    max-width: 40rem;
+    padding: 10px 12px 10px (12px + 12px + 12px);
+    border: 1px solid $c-subtle-border;
+    border-radius: $radius-base;
+    background: $c-subtle-background;
+}
+
+.control--primary input:checked + label {
+    border-color: $c-input-focus;
+}
+
+
+// ==============================================
+// Control - Hint
+// ==============================================
+
+.control_hint {
+    padding-top: 3px;
+    color: $c-text-subtle;
+    font-size: $font-size-s;
+}

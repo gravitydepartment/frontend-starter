@@ -1,0 +1,32 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Fieldset
+// ==============================================
+
+.fieldset {
+    margin-bottom: ($margin-bottom * 1.5);
+}
+
+
+// ==============================================
+// Fieldset - Legend
+// ==============================================
+
+.fieldset .legend {
+    @include h2;
+    margin-bottom: 1em;
+    padding: 0 10px;
+    border-top: 1px solid $c-border;
+    border-bottom: 1px solid $c-border;
+    background: $c-background;
+    font-size: $font-size-xl;
+    line-height: 44px;
+}

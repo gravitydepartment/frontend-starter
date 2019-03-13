@@ -1,0 +1,19 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Function - White
+// ==============================================
+
+/**
+ * @param {number} opacity - 0 to 1.0
+ */
+@function white ($opacity) {
+    @return rgba(255, 255, 255, $opacity);
+}

@@ -1,0 +1,233 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-accordion: 768px !default;
+
+
+// ==============================================
+// Accordion
+// ==============================================
+
+.accordion {
+    position:relative;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-accordion) {
+
+    .accordion {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+}
+
+
+// ==============================================
+// Accordion - Nav
+// ==============================================
+
+//.accordion_nav {}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-accordion - 1px) {
+
+    .accordion_nav {
+        display:none;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-accordion) {
+
+    .accordion_nav {
+        width: 165px; // Calc
+        padding: 15px;
+        font-size: $font-size-s;
+    }
+
+    .accordion_nav-liner {
+        position: sticky;
+        top: 15px;
+    }
+
+    .accordion_nav h2 {
+        font-size: $font-size-s;
+    }
+
+}
+
+
+// ==============================================
+// Accordion - Sections
+// ==============================================
+
+//.accordion_sections {}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-accordion) {
+
+    .accordion_sections {
+        width: calc(100% - 165px);
+        border-right: 1px solid $c-border;
+    }
+
+}
+
+
+// ==============================================
+// Accordion - Section
+// ==============================================
+
+.accordion_section {
+    overflow: hidden;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-accordion) {
+
+    .accordion_section {
+        padding: $margin-bottom $liner-base 0;
+        border-bottom: 1px solid $c-border;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: 900px) {
+
+    .accordion_section {
+        padding-right: $liner-l;
+        padding-left: $liner-l;
+    }
+
+}
+
+
+// ==============================================
+// Accordion - Header
+// ==============================================
+
+.accordion_header {
+    position: relative;
+    margin: 0;
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-accordion - 1px) {
+
+    .accordion_header {
+        position: relative;
+        margin: 0;
+        padding: 15px $liner-base 15px ($liner-base + 11px + 10px);
+        border-bottom: 1px solid $c-border;
+        background: #FFF;
+        font-size: $font-size-l;
+        cursor: pointer;
+        user-select: none;
+
+        // Arrow
+        &::before {
+            @include svg (arrow-11-right-dark);
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: $liner-base;
+            width: 11px;
+            height: 11px;
+            margin-top: (11px / -2);
+            transition: transform 150ms linear;
+        }
+    }
+
+    .no-touchevents .accordion_header {
+        &:hover {
+            background: $c-border;
+        }
+    }
+
+    // ----------------------------------------------
+    // State: Is Active
+
+    .accordion_section.is-active .accordion_header {
+        background: $c-border;
+
+        // Arrow
+        &::before {
+            transform: rotate(90deg);
+        }
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-accordion) {
+
+    .accordion_header {
+        margin-bottom: 15px;
+    }
+
+}
+
+
+// ==============================================
+// Accordion - Body
+// ==============================================
+
+.accordion_body {
+    margin-bottom: 12px;
+}
+
+.accordion_body > *:last-child {
+    margin-bottom: 0;
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-accordion - 1px) {
+
+    .accordion_body {
+        display: none;
+    }
+
+    .accordion_section.is-active .accordion_body {
+        display: block;
+        margin-bottom: 0;
+        padding: $liner-base;
+        border-bottom: 1px solid $c-border;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-accordion) {
+
+    .accordion_body {
+        margin-bottom: $margin-bottom;
+    }
+
+}

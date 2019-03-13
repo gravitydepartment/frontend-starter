@@ -1,0 +1,39 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Loading
+// ==============================================
+
+.loading,
+.please-wait {
+    position: relative;
+    padding-left: (24px + 8px);
+    font-size: $font-size-s;
+    line-height: 24px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        @include svg (loading);
+        background-repeat: no-repeat;
+        animation: rotate-clockwise 1500ms linear;
+        animation-iteration-count: infinite;
+    }
+}
+
+.button + .loading,
+.button + .please-wait {
+    display: inline-block;
+    margin-left: 15px;
+}

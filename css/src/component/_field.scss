@@ -1,0 +1,73 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-field: 600px !default;
+
+$field-inline-label-width: 160px !default;
+
+
+// ==============================================
+// Field
+// ==============================================
+
+.field {
+    margin-bottom: $margin-bottom;
+}
+
+// ----------------------------------------------
+// Modifier: Inline
+
+@media (min-width: $bp-field) {
+
+    .field--inline {
+        display: flex;
+    }
+
+}
+
+
+// ==============================================
+// Field - Label
+// ==============================================
+
+.field > label:first-child {
+    margin-bottom: 0.5em;
+}
+
+// ----------------------------------------------
+// Parent Modifier: Inline
+
+@media (min-width: $bp-field) {
+
+    .field--inline label {
+        width: $field-inline-label-width;
+        padding: 0.8em 1em 0 0;
+    }
+
+}
+
+
+// ==============================================
+// Field - Input
+// ==============================================
+
+// ----------------------------------------------
+// Parent Modifier: Inline
+
+@media (min-width: $bp-field) {
+
+    .field--inline > .field_input {
+        flex: 1;
+    }
+
+}

@@ -1,0 +1,32 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-input-placeholder: #A8A8A8 !default;
+
+
+// ==============================================
+// Input Placeholder
+// See: https://css-tricks.com/almanac/selectors/p/placeholder/
+// ==============================================
+
+::placeholder {
+    color: $c-input-placeholder;
+    font-size: 16px; // Prevent iOS zoom on focus.
+}
+
+// ----------------------------------------------
+// Modifier: Font Size
+
+.input-placeholder--s::placeholder {
+    font-size: $font-size-s;
+}

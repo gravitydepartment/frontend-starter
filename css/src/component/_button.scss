@@ -1,0 +1,303 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-button-danger-base:   $c-action-danger-base   !default;
+$c-button-danger-hover:  $c-action-danger-hover  !default;
+$c-button-danger-focus:  $c-action-danger-focus  !default;
+$c-button-danger-active: $c-action-danger-active !default;
+
+$c-button-default-base:   $c-action-default-base   !default;
+$c-button-default-hover:  $c-action-default-hover  !default;
+$c-button-default-focus:  $c-action-default-focus  !default;
+$c-button-default-active: $c-action-default-active !default;
+
+$c-button-disabled-base: $c-action-disabled-base !default;
+$c-button-disabled-text: $c-action-disabled-text !default;
+
+$c-button-help-base:   $c-action-help-base   !default;
+$c-button-help-hover:  $c-action-help-hover  !default;
+$c-button-help-focus:  $c-action-help-focus  !default;
+$c-button-help-active: $c-action-help-active !default;
+
+$c-button-primary-base:   $c-action-primary-base   !default;
+$c-button-primary-hover:  $c-action-primary-hover  !default;
+$c-button-primary-focus:  $c-action-primary-focus  !default;
+$c-button-primary-active: $c-action-primary-active !default;
+
+$c-button-secondary-base:   $c-action-secondary-base   !default;
+$c-button-secondary-hover:  $c-action-secondary-hover  !default;
+$c-button-secondary-focus:  $c-action-secondary-focus  !default;
+$c-button-secondary-active: $c-action-secondary-active !default;
+
+
+// ==============================================
+// Button
+// ==============================================
+
+.button {
+    display: inline-block;
+    padding: 0 0.9em;
+    border: 0;
+    border-radius: $radius-l;
+    background: $c-button-default-base;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: $transition-base;
+    cursor: pointer;
+
+    &:hover {
+        background: $c-button-default-hover;
+        box-shadow: black(0.25) 0 0 0 1px inset;
+        color: #FFF;
+    }
+
+    &:focus,
+    &:active {
+        background: $c-button-default-active;
+        color: #FFF;
+    }
+
+    &:focus {
+        @include focus;
+    }
+}
+
+
+// ==============================================
+// Modifier: Block
+// ==============================================
+
+.button--block {
+    width: 100%;
+}
+
+
+// ==============================================
+// Modifier: Danger
+// ==============================================
+
+.button--danger {
+    background: $c-button-danger-base;
+
+    &:hover {
+        background: $c-button-danger-hover;
+        color: #FFF;
+    }
+
+    &:focus {
+        background: $c-button-danger-focus;
+        color: #FFF;
+    }
+
+    &:active {
+        background: $c-button-danger-active;
+        color: #FFF;
+    }
+}
+
+
+// ==============================================
+// Modifier: Disabled
+// Use "class" for <a>.
+// Use "attribute" for form elements that support the "disabled" state.
+// ==============================================
+
+/* stylelint-disable declaration-no-important */
+.button--disabled,
+.button:disabled {
+    background: $c-button-disabled-base !important;
+    color: $c-button-disabled-text !important;
+    cursor: not-allowed;
+
+    &:hover {
+        background: $c-button-disabled-base !important;
+        box-shadow: none !important;
+        color: $c-button-disabled-text !important;
+    }
+
+    &:focus {
+        background: $c-button-disabled-base !important;
+        color: $c-button-disabled-text !important;
+    }
+
+    &:active {
+        background: $c-button-disabled-base !important;
+        color: $c-button-disabled-text !important;
+    }
+}
+/* stylelint-enable */
+
+
+// ==============================================
+// Modifier: Help
+// ==============================================
+
+.button--help {
+    background: $c-button-help-base;
+    color: #FFF;
+
+    &::before {
+        content: '?';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 0.75em;
+        border-radius: 12px;
+        background: #FFF;
+        color: $c-text-base;
+        font-size: 15px;
+        line-height: 24px;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        background: $c-button-help-hover;
+        color: #FFF;
+    }
+
+    &:focus {
+        background: $c-button-help-focus;
+        color: #FFF;
+    }
+
+    &:active {
+        background: $c-button-help-active;
+        color: #FFF;
+    }
+}
+
+
+// ==============================================
+// Modifier: Loading
+// ==============================================
+
+.button--loading {
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 0.6em;
+        @include svg (loading);
+        background-repeat: no-repeat;
+        background-size: contain;
+        line-height: 24px;
+        vertical-align: middle;
+        animation: rotate-clockwise 2500ms linear;
+        animation-iteration-count: infinite;
+    }
+
+    &.button--xl::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    &.button--l::before {
+        width: 24px;
+        height: 24px;
+    }
+
+    &.button--s::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    &.button--xs::before {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+
+// ==============================================
+// Modifier: Primary
+// ==============================================
+
+.button--primary {
+    background: $c-button-primary-base;
+
+    &:hover {
+        background: $c-button-primary-hover;
+        color: #FFF;
+    }
+
+    &:focus {
+        background: $c-button-primary-focus;
+        color: #FFF;
+    }
+
+    &:active {
+        background: $c-button-primary-active;
+        color: #FFF;
+    }
+}
+
+
+// ==============================================
+// Modifier: Secondary
+// ==============================================
+
+.button--secondary {
+    background: $c-button-secondary-base;
+    color: #FFF;
+
+    &:hover {
+        background: $c-button-secondary-hover;
+        color: #FFF;
+    }
+
+    &:focus {
+        background: $c-button-secondary-focus;
+        color: #FFF;
+    }
+
+    &:active {
+        background: $c-button-secondary-active;
+        color: #FFF;
+    }
+}
+
+
+// ==============================================
+// Modifier: Sizes
+// ==============================================
+
+.button--xl {
+    font-size: $font-size-xxxl;
+    font-weight: 300;
+    line-height: 60px;
+}
+
+.button--l {
+    font-size: $font-size-xxl;
+    font-weight: 300;
+    line-height: 48px;
+}
+
+.button--s {
+    font-size: $font-size-s;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+
+.button--xs {
+    font-size: $font-size-xs;
+    line-height: 22px;
+    text-transform: capitalize;
+}

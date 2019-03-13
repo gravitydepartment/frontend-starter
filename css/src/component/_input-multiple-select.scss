@@ -1,0 +1,36 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Input Multiple Select
+// ==============================================
+
+.input-multiple-select {
+    padding: 0.5em;
+    border: 1px solid $c-input-border;
+    border-radius: $radius-base;
+    background: #FFF;
+    box-shadow: $box-shadow-input-text;
+
+    &:disabled {
+        @include input-disabled;
+    }
+
+    &:focus {
+        @include focus;
+    }
+
+    &.validation-failed {
+        border-color: $c-danger;
+
+        &:focus {
+            @include focus-error;
+        }
+    }
+}

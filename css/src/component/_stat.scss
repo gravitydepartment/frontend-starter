@@ -1,0 +1,50 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Stat
+// ==============================================
+
+.stat {
+    margin-bottom: $margin-bottom;
+}
+
+
+// ==============================================
+// Stat - Label
+// ==============================================
+
+.stat_label {
+    font-size: $font-size-xxs;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+// ----------------------------------------------
+// Parent Modifier: Strong
+
+.stat--strong .stat_label {
+    font-weight: normal;
+}
+
+
+// ==============================================
+// Stat - Value
+// ==============================================
+
+//.stat_value {}
+
+// ----------------------------------------------
+// Parent Modifier: Strong
+
+.stat--strong .stat_value {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: $line-height-xxs;
+}

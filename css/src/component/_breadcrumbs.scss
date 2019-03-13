@@ -1,0 +1,68 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-breadcrumbs: 900px !default;
+
+
+// ==============================================
+// Breadcrumbs
+// ==============================================
+
+.breadcrumbs {
+    margin-top: 8px;
+    padding: 0 $trim-base;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-breadcrumbs) {
+
+    .breadcrumbs {
+        padding: 0;
+    }
+
+}
+
+
+// ==============================================
+// Breadcrumbs - Item
+// ==============================================
+
+.breadcrumbs_item {
+    display: inline-block;
+    color: $c-text-subtle;
+    font-size: $font-size-xs;
+
+    // Hide the last breadcrumb, which is not a link
+    /*
+    &:last-child {
+        display: none;
+    }
+    */
+}
+
+
+// ==============================================
+// Breadcrumbs - Misc.
+// ==============================================
+
+.breadcrumbs span {
+    padding: 0 0.3em;
+}
+
+// Hide the separator before the last breadcrumb
+/*
+.breadcrumbs_item:nth-last-child(2) span {
+    display: none;
+}
+*/

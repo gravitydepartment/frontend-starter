@@ -1,0 +1,53 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Space
+// ==============================================
+
+$space-xxxl:  48px !default;
+$space-xxl:   32px !default;
+$space-xl:    24px !default;
+$space-l:     20px !default;
+
+$space-base:  16px !default;
+
+$space-s:     12px !default;
+$space-xs:    8px  !default;
+$space-xxs:   4px  !default;
+$space-xxxs:  2px  !default;
+
+
+// ==============================================
+// Units
+// ==============================================
+
+// Gap is the standard vertical spacing between modules.
+$gap: $space-xxl !default;
+
+// Gutter is the space between grid columns.
+$gutter: $space-base !default;
+
+// Liner is the whitespace between the content box and content.
+$liner-base: 15px !default;
+$liner-l:    30px !default; // min-width: 900px
+
+// Trim is the whitespace between the content and viewport edge.
+$trim-base: $space-base !default;
+$trim-l:    $space-xl   !default; // min-width: 900px
+
+
+// ==============================================
+// Elements
+// ==============================================
+
+$input-max-width-base: 40rem !default;
+$input-max-width-s:    24rem !default;
+$input-max-width-xs:   16rem !default;
+$input-max-width-xxs:  8rem  !default;

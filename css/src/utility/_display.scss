@@ -1,0 +1,54 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Hide
+// ==============================================
+
+.hide,
+.no-display {
+    display: none !important;
+}
+
+
+// ==============================================
+// Hide Print
+// ==============================================
+
+// Hide only for print (but show for web).
+// Intended only for this dual purpose.
+// Use "hide" otherwise.
+
+@media print {
+
+    .hide-print {
+        display: none !important;
+    }
+
+}
+
+
+// ==============================================
+// Hide Web
+// ==============================================
+
+// Hide only for web (but show for print).
+// Intended only for this dual purpose.
+// Use "hide" otherwise.
+
+@media only screen {
+
+    .hide-web {
+        display: none !important;
+    }
+
+}

@@ -1,0 +1,26 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Lead
+// ==============================================
+
+.lead {
+    font-size: $font-size-l;
+}
+
+// ----------------------------------------------
+
+@media (min-width: 600px) {
+
+    .lead {
+        font-size: $font-size-xxl;
+    }
+
+}

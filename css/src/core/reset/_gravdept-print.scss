@@ -1,0 +1,57 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// **********************************************
+// Use "@media print" queries in components for maintainability close to the source.
+// Use "hide-print" and "hide-web" utility classes to make components printer-friendly.
+// See: /css/src/utility/_display.scss
+// **********************************************
+
+
+// ==============================================
+// Print
+// ==============================================
+
+@media print {
+
+    @page {
+        margin: 1cm;
+    }
+
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        text-shadow: none !important;
+        filter: none !important;
+    }
+
+    body,
+    button,
+    input,
+    table,
+    textarea {
+        font-size: 12px !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+}

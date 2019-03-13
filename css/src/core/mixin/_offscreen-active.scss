@@ -1,0 +1,28 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Offscreen Active
+// ==============================================
+
+/**
+ * @param {string} $position - 'right|left'
+ */
+@mixin offscreen-active ($position: 'right') {
+    box-shadow: 0 0 10px 5px black(0.3);
+    transition: transform 200ms ease-out; // Animate in (slower)
+
+    @if $position == 'right' {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    @if $position == 'left' {
+        transform: translate3d(100%, 0, 0);
+    }
+}

@@ -1,0 +1,18 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Prevent Body Scroll
+// ==============================================
+
+@mixin prevent-body-scroll {
+    position: fixed;
+    overflow: hidden;
+    width: 100%; // Prevent whitespace collapsing with "position: fixed"
+}

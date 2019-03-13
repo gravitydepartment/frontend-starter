@@ -1,0 +1,87 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$pager-size: 46px !default;
+
+
+// ==============================================
+// Pager
+// ==============================================
+
+.pager {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -15px;
+}
+
+
+// ==============================================
+// Pager - Misc.
+// ==============================================
+
+.pager > * {
+    min-width: $pager-size;
+    height: $pager-size;
+    margin-top: 15px;
+    border-top:    1px solid $c-border;
+    border-bottom: 1px solid $c-border;
+    border-left:   1px solid $c-border;
+    line-height: $pager-size;
+    text-align: center;
+    text-decoration: none;
+
+    &:first-child {
+        border-top-left-radius: $radius-base;
+        border-bottom-left-radius: $radius-base;
+    }
+
+    &:last-child {
+        border-right: 1px solid $c-border;
+        border-top-right-radius: $radius-base;
+        border-bottom-right-radius: $radius-base;
+    }
+}
+
+.pager_next,
+.pager_next-jump,
+.pager_page,
+.pager_previous,
+.pager_previous-jump {
+    &:hover {
+        background: $c-background;
+    }
+}
+
+
+// ==============================================
+// Pager - Current
+// ==============================================
+
+.pager_current {
+    background: $c-background;
+    font-weight: bold;
+}
+
+
+// ==============================================
+// Pager - Next
+// Pager - Previous
+// ==============================================
+
+.pager_next,
+.pager_next-jump,
+.pager_previous,
+.pager_previous-jump {
+    width: auto;
+    padding: 0 10px;
+}

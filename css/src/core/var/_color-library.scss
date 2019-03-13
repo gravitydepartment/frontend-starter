@@ -1,0 +1,200 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable color-hex-case */
+
+
+// ==============================================
+// Color Libary
+// ==============================================
+
+/*
+The color library provides a full spectrum of hues and shades with consistent tone.
+Gradual color stops are useful for defining UI contrast levels and states.
+
+Based on Open Color (1.4.0)
+
+Reference: https://yeun.github.io/open-color/asset/images/open-color.svg
+Website:   https://yeun.github.io/open-color/
+Source:    https://github.com/yeun/open-color
+*/
+
+
+// ==============================================
+// Colors
+// ==============================================
+
+// Gray
+
+$c-library-gray-0: #f8f9fa !default;
+$c-library-gray-1: #f1f3f5 !default;
+$c-library-gray-2: #e9ecef !default;
+$c-library-gray-3: #dee2e6 !default;
+$c-library-gray-4: #ced4da !default;
+$c-library-gray-5: #adb5bd !default;
+$c-library-gray-6: #868e96 !default;
+$c-library-gray-7: #495057 !default;
+$c-library-gray-8: #343a40 !default;
+$c-library-gray-9: #212529 !default;
+
+// Red
+
+$c-library-red-0: #fff5f5 !default;
+$c-library-red-1: #ffe3e3 !default;
+$c-library-red-2: #ffc9c9 !default;
+$c-library-red-3: #ffa8a8 !default;
+$c-library-red-4: #ff8787 !default;
+$c-library-red-5: #ff6b6b !default;
+$c-library-red-6: #fa5252 !default;
+$c-library-red-7: #f03e3e !default;
+$c-library-red-8: #e03131 !default;
+$c-library-red-9: #c92a2a !default;
+
+// Pink
+
+$c-library-pink-0: #fff0f6 !default;
+$c-library-pink-1: #ffdeeb !default;
+$c-library-pink-2: #fcc2d7 !default;
+$c-library-pink-3: #faa2c1 !default;
+$c-library-pink-4: #f783ac !default;
+$c-library-pink-5: #f06595 !default;
+$c-library-pink-6: #e64980 !default;
+$c-library-pink-7: #d6336c !default;
+$c-library-pink-8: #c2255c !default;
+$c-library-pink-9: #a61e4d !default;
+
+// Grape
+
+$c-library-grape-0: #f8f0fc !default;
+$c-library-grape-1: #f3d9fa !default;
+$c-library-grape-2: #eebefa !default;
+$c-library-grape-3: #e599f7 !default;
+$c-library-grape-4: #da77f2 !default;
+$c-library-grape-5: #cc5de8 !default;
+$c-library-grape-6: #be4bdb !default;
+$c-library-grape-7: #ae3ec9 !default;
+$c-library-grape-8: #9c36b5 !default;
+$c-library-grape-9: #862e9c !default;
+
+// Violet
+
+$c-library-violet-0: #f3f0ff !default;
+$c-library-violet-1: #e5dbff !default;
+$c-library-violet-2: #d0bfff !default;
+$c-library-violet-3: #b197fc !default;
+$c-library-violet-4: #9775fa !default;
+$c-library-violet-5: #845ef7 !default;
+$c-library-violet-6: #7950f2 !default;
+$c-library-violet-7: #7048e8 !default;
+$c-library-violet-8: #6741d9 !default;
+$c-library-violet-9: #5f3dc4 !default;
+
+// Indigo
+
+$c-library-indigo-0: #edf2ff !default;
+$c-library-indigo-1: #dbe4ff !default;
+$c-library-indigo-2: #bac8ff !default;
+$c-library-indigo-3: #91a7ff !default;
+$c-library-indigo-4: #748ffc !default;
+$c-library-indigo-5: #5c7cfa !default;
+$c-library-indigo-6: #4c6ef5 !default;
+$c-library-indigo-7: #4263eb !default;
+$c-library-indigo-8: #3b5bdb !default;
+$c-library-indigo-9: #364fc7 !default;
+
+// Blue
+
+$c-library-blue-0: #e8f7ff !default;
+$c-library-blue-1: #ccedff !default;
+$c-library-blue-2: #a3daff !default;
+$c-library-blue-3: #72c3fc !default;
+$c-library-blue-4: #4dadf7 !default;
+$c-library-blue-5: #329af0 !default;
+$c-library-blue-6: #228ae6 !default;
+$c-library-blue-7: #1c7cd6 !default;
+$c-library-blue-8: #1b6ec2 !default;
+$c-library-blue-9: #1862ab !default;
+
+// Cyan
+
+$c-library-cyan-0: #e3fafc !default;
+$c-library-cyan-1: #c5f6fa !default;
+$c-library-cyan-2: #99e9f2 !default;
+$c-library-cyan-3: #66d9e8 !default;
+$c-library-cyan-4: #3bc9db !default;
+$c-library-cyan-5: #22b8cf !default;
+$c-library-cyan-6: #15aabf !default;
+$c-library-cyan-7: #1098ad !default;
+$c-library-cyan-8: #0c8599 !default;
+$c-library-cyan-9: #0b7285 !default;
+
+// Teal
+
+$c-library-teal-0: #e6fcf5 !default;
+$c-library-teal-1: #c3fae8 !default;
+$c-library-teal-2: #96f2d7 !default;
+$c-library-teal-3: #63e6be !default;
+$c-library-teal-4: #38d9a9 !default;
+$c-library-teal-5: #20c997 !default;
+$c-library-teal-6: #12b886 !default;
+$c-library-teal-7: #0ca678 !default;
+$c-library-teal-8: #099268 !default;
+$c-library-teal-9: #087f5b !default;
+
+// Green
+
+$c-library-green-0: #ebfbee !default;
+$c-library-green-1: #d3f9d8 !default;
+$c-library-green-2: #b2f2bb !default;
+$c-library-green-3: #8ce99a !default;
+$c-library-green-4: #69db7c !default;
+$c-library-green-5: #51cf66 !default;
+$c-library-green-6: #40c057 !default;
+$c-library-green-7: #37b24d !default;
+$c-library-green-8: #2f9e44 !default;
+$c-library-green-9: #2b8a3e !default;
+
+// Lime
+
+$c-library-lime-0: #f4fce3 !default;
+$c-library-lime-1: #e9fac8 !default;
+$c-library-lime-2: #d8f5a2 !default;
+$c-library-lime-3: #c0eb75 !default;
+$c-library-lime-4: #a9e34b !default;
+$c-library-lime-5: #94d82d !default;
+$c-library-lime-6: #82c91e !default;
+$c-library-lime-7: #74b816 !default;
+$c-library-lime-8: #66a80f !default;
+$c-library-lime-9: #5c940d !default;
+
+// Yellow
+
+$c-library-yellow-0: #fff9db !default;
+$c-library-yellow-1: #fff3bf !default;
+$c-library-yellow-2: #ffec99 !default;
+$c-library-yellow-3: #ffe066 !default;
+$c-library-yellow-4: #ffd43b !default;
+$c-library-yellow-5: #fcc419 !default;
+$c-library-yellow-6: #fab005 !default;
+$c-library-yellow-7: #f59f00 !default;
+$c-library-yellow-8: #f08c00 !default;
+$c-library-yellow-9: #e67700 !default;
+
+// Orange
+
+$c-library-orange-0: #fff4e6 !default;
+$c-library-orange-1: #ffe8cc !default;
+$c-library-orange-2: #ffd8a8 !default;
+$c-library-orange-3: #ffc078 !default;
+$c-library-orange-4: #ffa94d !default;
+$c-library-orange-5: #ff922b !default;
+$c-library-orange-6: #fd7e14 !default;
+$c-library-orange-7: #f76707 !default;
+$c-library-orange-8: #e8590c !default;
+$c-library-orange-9: #d9480f !default;

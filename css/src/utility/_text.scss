@@ -1,0 +1,83 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Font Style
+// ==============================================
+
+.font-style-normal { font-style: normal !important; }
+.font-style-italic { font-style: italic !important; }
+
+
+// ==============================================
+// Font Weight
+// ==============================================
+
+.font-weight-normal { font-weight: normal !important; }
+.font-weight-bold   { font-weight: bold   !important; }
+
+
+// ==============================================
+// Text Color
+// ==============================================
+
+.text-danger  { color: $c-text-danger  !important; }
+.text-subtle  { color: $c-text-subtle  !important; }
+.text-success { color: $c-text-success !important; }
+
+.text-contrast-base   { color: $c-text-contrast-base   !important; }
+.text-contrast-subtle { color: $c-text-contrast-subtle !important; }
+
+
+// ==============================================
+// Text Size
+// ==============================================
+
+.text-xxxl  { font-size: $font-size-xxxl !important; }
+.text-xxl   { font-size: $font-size-xxl  !important; }
+.text-xl    { font-size: $font-size-xl   !important; }
+.text-l     { font-size: $font-size-l    !important; }
+.text-base  { font-size: $font-size-base !important; }
+.text-s     { font-size: $font-size-s    !important; }
+.text-xs    { font-size: $font-size-xs   !important; }
+.text-xxs   { font-size: $font-size-xxs  !important; }
+
+
+// ==============================================
+// Text Transform
+// ==============================================
+
+.text-capitalize { text-transform: capitalize !important; }
+.text-lowercase  { text-transform: lowercase  !important; }
+.text-uppercase  { text-transform: uppercase  !important; }
+
+
+// ==============================================
+// Text Truncate
+// ==============================================
+
+.text-truncate {
+    overflow:      hidden   !important;
+    width:         100%     !important;
+    text-overflow: ellipsis !important;
+    white-space:   nowrap   !important;
+}
+
+
+// ==============================================
+// Text No Wrap
+// ==============================================
+
+.text-nowrap,
+.nobr {
+    white-space: nowrap !important;
+}

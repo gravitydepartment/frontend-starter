@@ -1,0 +1,37 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Simple Table
+// ==============================================
+
+.simple-table {
+    margin-bottom: $gap;
+}
+
+.simple-table th {
+    font-weight: bold;
+}
+
+.simple-table th,
+.simple-table td {
+    padding-right: 1.75em;
+    padding-bottom: 0.5em;
+    line-height: $line-height-xxs;
+    vertical-align: top;
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.simple-table tr:last-child th,
+.simple-table tr:last-child td {
+    padding-bottom: 0;
+}

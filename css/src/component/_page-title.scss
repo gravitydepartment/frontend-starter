@@ -1,0 +1,48 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Page Title
+// ==============================================
+
+//.page-title {}
+
+.page-title h1 {
+    font-size: $font-size-xxxl;
+}
+
+// ----------------------------------------------
+
+@media (min-width: 600px) {
+
+    .page-title h1 {
+        font-size: $font-size-xxxxl;
+    }
+
+}
+
+
+// ==============================================
+// Page Title - Pre
+// ==============================================
+
+.page-title_pre {
+    font-size: $font-size-xs;
+}
+
+
+// ==============================================
+// Page Title - Actions
+// ==============================================
+
+.page-title_actions {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}

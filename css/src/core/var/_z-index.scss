@@ -1,0 +1,71 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// **********************************************
+// The z-index reference helps track the layering of elements.
+// Whenever a z-index is added or changed, it must be documented.
+// Otherwise the z-index arms race gets out of control.
+// **********************************************
+
+
+// ==============================================
+// Negatives
+// ==============================================
+
+// None
+
+
+// ==============================================
+// 0 - Content
+// ==============================================
+
+$z-image-border: 1 !default; // Just above content
+
+$z-carousel-nav: 10 !default;
+
+$z-input-select: 20 !default;
+
+$z-tooltip: 30 !default;
+
+
+// ==============================================
+// 100 - Offscreen
+// ==============================================
+
+$z-offscreen-backdrop: 100 !default;
+$z-offscreen:          101 !default;
+
+
+// ==============================================
+// 200 - Floating UI
+// ==============================================
+
+
+// ==============================================
+// 300 - Menu
+// ==============================================
+
+$z-menu:              300 !default;
+$z-menu-arrow-stroke: 301 !default;
+$z-menu-arrow-fill:   302 !default;
+
+
+// ==============================================
+// 400 - Notify
+// ==============================================
+
+$z-notify: 400 !default;
+
+
+// ==============================================
+// 500 - Modal
+// ==============================================
+
+$z-modal-backdrop: 500 !default;
+$z-modal-dialog:   501 !default;

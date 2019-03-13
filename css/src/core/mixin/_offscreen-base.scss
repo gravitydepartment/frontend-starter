@@ -1,0 +1,50 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-empty-line-before */
+
+
+// ==============================================
+// Mixin - Offscreen Base
+// ==============================================
+
+/**
+ * @param {string} $position - 'right|left'
+ * @param {string} $max-width - Pixel width of offscreen panel.
+ */
+@mixin offscreen-base ($position: 'right', $max-width: 300px) {
+    overflow-y: auto;                  // Enable vertical scrolling within element
+    -ms-overflow-style: none;          // Prevent visible scrollbar
+    -webkit-overflow-scrolling: touch; // Scroll with inertia
+    position: fixed;
+    top: 0;
+
+    @if $position == 'right' {
+        left: 100%;
+    }
+
+    @if $position == 'left' {
+        right: 100%;
+    }
+
+    z-index: $z-offscreen;
+    width: 100%;
+    max-width: $max-width;
+    height: 100vh;
+    padding-bottom: 25vh; // Force whitespace at bottom of scrolling container to visualize emptiness
+    background: #FFF;
+    transform: translate3d(0, 0, 0);
+    transition: transform 150ms ease-in; // Animate out (faster)
+    will-change: transform;
+
+    // Prevent visible scrollbar
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

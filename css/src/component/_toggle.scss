@@ -1,0 +1,24 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Toggle UI
+// ==============================================
+
+[data-toggle-trigger] {
+    cursor: pointer;
+}
+
+[data-toggle-target] {
+    display: none;
+}
+
+[data-toggle='show'] > [data-toggle-target] {
+    display: block;
+}

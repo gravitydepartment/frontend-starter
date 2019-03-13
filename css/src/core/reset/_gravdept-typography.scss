@@ -1,0 +1,154 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-link-base:    $c-blue-base !default;
+$c-link-hover:   $c-blue-mid  !default;
+$c-link-focus:   $c-blue-mid  !default;
+$c-link-active:  $c-blue-mid  !default;
+$c-link-visited: $c-blue-base !default;
+
+
+// ==============================================
+// Default Typography
+// ==============================================
+
+body,
+button,
+input,
+table,
+textarea {
+    font-family: $font-family-sans;
+    color: $c-text-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+}
+
+
+// ==============================================
+// Anchor
+// ==============================================
+
+a {
+    color: $c-link-base;
+    text-decoration: none;
+
+    &:hover {
+        color: $c-link-hover;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 0;
+        //color: $c-link-focus;
+    }
+
+    &:active {
+        //color: $c-link-active;
+        color: inherit;
+    }
+
+    /*
+    &:visited {
+        color: $c-link-visited;
+    }
+    */
+}
+
+a:not([class]) {
+    &:focus {
+        color: $c-link-focus;
+        text-decoration: underline;
+    }
+}
+
+
+// ==============================================
+// Address
+// ==============================================
+
+address {
+    margin-bottom: 10px;
+}
+
+
+// ==============================================
+// Blockquote
+// ==============================================
+
+blockquote {
+    margin-bottom: $gap;
+    font-family: $font-family-special;
+    font-size: $font-size-xxxl;
+    font-weight: 300;
+    font-style: italic;
+    line-height: $line-height-xs;
+
+    &::before {
+        content: '\201C';
+    }
+
+    &::after {
+        content: '\201D';
+    }
+}
+
+
+// ==============================================
+// Heading
+// ==============================================
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: inherit;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, .h1 { @include h1; }
+h2, .h2 { @include h2; }
+h3, .h3 { @include h3; }
+h4, .h4 { @include h4; }
+h5, .h5 { @include h5; }
+h6, .h6 { @include h6; }
+
+// ----------------------------------------------
+
+@media print {
+
+    /* stylelint-disable declaration-no-important */
+    h1, .h1 { font-size: 24px !important; }
+    h2, .h2 { font-size: 18px !important; }
+    h3, .h3 { font-size: 14px !important; }
+    h4, .h4 { font-size: 12px !important; }
+    /* stylelint-enable */
+}
+
+
+// ==============================================
+// List
+// ==============================================
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+// ==============================================
+// Paragraph
+// ==============================================
+
+p {
+    margin-bottom: $margin-bottom;
+    line-height: $line-height-base;
+}

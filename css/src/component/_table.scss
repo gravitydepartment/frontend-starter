@@ -1,0 +1,224 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-table-linearize: 700px !default;
+
+$c-table-background: $c-background !default;
+$c-table-border:     $c-border     !default;
+
+$c-table-hover: $c-yellow-light !default;
+
+$c-table-zebra-light: #FFF !default;
+$c-table-zebra-dark:  tint($c-table-background, 40%) !default;
+
+
+// ==============================================
+// Table
+// ==============================================
+
+.table {
+    width: 100%;
+    margin-bottom: $gap;
+}
+
+.table td,
+.table th {
+    padding: 10px 8px;
+    border-top: 1px solid $c-table-border;
+    border-bottom: 1px solid $c-table-border;
+    vertical-align: top;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table thead th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: $c-table-background;
+    font-size: $font-size-s;
+    white-space: nowrap;
+}
+
+.table tfoot tr {
+    background: $c-table-background;
+}
+
+// ----------------------------------------------
+
+@media print {
+
+    .table td,
+    .table th {
+        padding: 4px;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Border
+// ==============================================
+
+.table--border {
+    border: 1px solid $c-table-border;
+}
+
+.table--border th,
+.table--border td {
+    border: 1px solid $c-table-border;
+}
+
+
+// ==============================================
+// Modifier: Hover
+// ==============================================
+
+.table--hover tbody tr:hover td { /* stylelint-disable-line selector-max-compound-selectors, selector-max-type */
+    background: $c-table-hover;
+}
+
+
+// ==============================================
+// Modifier: Linearize
+// ==============================================
+
+@media (max-width: $bp-table-linearize - 1px) {
+
+    .table--linearize {
+        border: 0;
+    }
+
+    .table--linearize tr,
+    .table--linearize th,
+    .table--linearize td {
+        display: block;
+    }
+
+    .table--linearize th,
+    .table--linearize td {
+        border: 0;
+    }
+
+    // ----------------------------------------------
+    // Head
+
+    .table--linearize thead {
+        display: none;
+    }
+
+    // ----------------------------------------------
+    // Body - TR
+
+    .table--linearize tbody tr {
+        border-top: 1px solid $c-table-border;
+        padding: 12px 0;
+
+        &:last-child {
+            border-bottom: 1px solid $c-table-border;
+        }
+    }
+
+    // ----------------------------------------------
+    // Body - TD
+
+    .table--linearize tbody td {
+        padding: 0;
+        border: 0;
+    }
+
+    // ----------------------------------------------
+    // Foot
+
+    .table--linearize tfoot tr {
+        border-bottom: 1px solid $c-table-border;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Linearize Utilities
+// ==============================================
+
+// These utility classes are designed for hiding table rows and showing
+// other elements when a table is linearized for small screens. Typically
+// the first cell remains visible and following cells are hidden with
+// their content duplicated by JS into the first cell and shortened).
+
+@media (max-width: $bp-table-linearize - 1px) {
+
+    .is-linearized-hide-cell,
+    .is-linearized-hide-elem {
+        display: none !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    .is-linearized-show-cell {
+        display: table-cell !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    .is-linearized-show-elem {
+        display: block !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    .is-linearized-unpad {
+        padding: 0 !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-table-linearize) {
+
+    .is-linearized-hide-cell {
+        display: table-cell !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    .is-linearized-hide-elem {
+        display: block !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    .is-linearized-show-cell,
+    .is-linearized-show-elem {
+        display: none !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Zebra Dark
+// ==============================================
+
+.table--zebra-dark tbody tr:nth-child(odd) {
+    background: $c-table-zebra-dark;
+}
+
+.table--zebra-dark tbody tr:nth-child(even) {
+    background: $c-table-zebra-light;
+}
+
+
+// ==============================================
+// Modifier: Zebra Light
+// ==============================================
+
+.table--zebra-light tbody tr:nth-child(odd) {
+    background: $c-table-zebra-light;
+}
+
+.table--zebra-light tbody tr:nth-child(even) {
+    background: $c-table-zebra-dark;
+}

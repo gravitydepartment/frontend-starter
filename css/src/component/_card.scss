@@ -1,0 +1,42 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Card
+// ==============================================
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: $gap;
+    padding: 15px;
+    border: 1px solid $c-border;
+    border-radius: $radius-base;
+    background: $c-background;
+}
+
+
+// ==============================================
+// Card - Misc.
+// ==============================================
+
+.card > *:last-child {
+    margin-bottom: 0;
+}
+
+
+// ==============================================
+// Context: Inside Layout Component
+// ==============================================
+
+.fluid-list .card,
+.solid-list .card {
+    height: 100%;
+}

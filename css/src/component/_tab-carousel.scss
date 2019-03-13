@@ -1,0 +1,167 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Tab Carousel
+// ==============================================
+
+.tab-carousel {
+    position: relative;
+    margin-bottom: $gap;
+}
+
+
+// ==============================================
+// Tab Carousel - Link
+// ==============================================
+
+.tab-carousel_link {
+    display: block;
+}
+
+
+// ==============================================
+// Tab Carousel - Owl Item
+// ==============================================
+
+.tab-carousel .owl-item.loading {
+    min-height: 150px;
+    @include svg (loader);
+    background-position: center center;
+    background-size: 48px 48px;
+    animation: rotate-clockwise 1000ms linear;
+    animation-iteration-count: infinite;
+}
+
+
+// ==============================================
+// Tab Carousel - Owl Buttons
+// ==============================================
+
+.tab-carousel .owl-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: (44px / -2); // Height of button only
+}
+
+.tab-carousel .owl-next,
+.tab-carousel .owl-prev {
+    @include image-replacement;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+}
+
+.tab-carousel .owl-next {
+    right: (-$trim-base - 1px);
+}
+
+.tab-carousel .owl-prev {
+    left: (-$trim-base - 1px);
+
+    // Arrow icon
+    &::before {
+        transform: rotate(180deg);
+    }
+}
+
+// ----------------------------------------------
+
+@media (min-width: 768px) {
+
+    .tab-carousel .owl-buttons {
+        margin-top: ((44px / -2) + (60px / -2)); // Height of button + pagination
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: 900px) {
+
+    .tab-carousel .owl-next {
+        right: -12px;
+    }
+
+    .tab-carousel .owl-prev {
+        left: -12px;
+    }
+
+}
+
+
+// ==============================================
+// Pagination
+// ==============================================
+
+.tab-carousel .owl-pagination {
+    display: flex;
+}
+
+.tab-carousel .owl-page {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8em 1em;
+    border-left: 1px solid $c-action-default-active;
+    background: $c-action-default-base;
+    color: #FFF;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background: $c-action-default-hover;
+    }
+
+    &:first-child {
+        border-left-width: 0;
+    }
+
+    &.active {
+        background: $c-action-default-active;
+        cursor: default;
+
+        &::before {
+            @include triangle (up, 12px, $c-action-default-active);
+            top: -12px;
+            left: 50%;
+            margin-left: -12px;
+        }
+    }
+}
+
+[data-tab-carousel-count='3'] .owl-page {
+    width: 33.333%;
+}
+
+[data-tab-carousel-count='4'] .owl-page {
+    width: 25%;
+}
+
+// ----------------------------------------------
+
+@media (max-width: 767px) {
+
+    .tab-carousel .owl-pagination {
+        display: none;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: 1024px) {
+
+    .tab-carousel .owl-page {
+        font-size: $font-size-base;
+    }
+
+}

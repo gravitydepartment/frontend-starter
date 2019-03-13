@@ -1,0 +1,29 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Controls
+// ==============================================
+
+//.controls {}
+
+.controls .control {
+    margin-bottom: 0.6em;
+}
+
+
+// ==============================================
+// Controls - Title
+// ==============================================
+
+.controls_title {
+    margin-bottom: 0.75em;
+    font-weight: bold;
+    line-height: $line-height-xs;
+}

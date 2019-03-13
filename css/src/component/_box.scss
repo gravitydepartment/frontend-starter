@@ -1,0 +1,129 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Box
+// ==============================================
+
+.box {
+    overflow: hidden;
+    margin-bottom: $gap;
+    border: 1px solid $c-border;
+    border-radius: $radius-base;
+    background: #FFF;
+}
+
+// ----------------------------------------------
+// Modifier: Inset
+
+.box--inset {
+    background: $c-background;
+    box-shadow: $box-shadow-inset;
+}
+
+
+// ==============================================
+// Box - Header
+// ==============================================
+
+.box_header {
+    position: relative;
+    padding: 10px 15px;
+    border-bottom: 1px solid $c-border;
+    background: $c-background;
+}
+
+.box_header h1,
+.box_header h2,
+.box_header h3 {
+    @include h3;
+    margin-bottom: 0;
+}
+
+.box_subtitle {
+    font-size: $font-size-s;
+}
+
+
+// ==============================================
+// Box - Body
+// ==============================================
+
+.box_body {
+    padding: 15px;
+}
+
+.box_body > *:last-child {
+    margin-bottom: 0;
+}
+
+
+// ==============================================
+// Box - Footer
+// ==============================================
+
+.box_footer {
+    padding: 10px 15px;
+    border-top: 1px solid $c-border;
+    background: $c-background;
+}
+
+
+// ==============================================
+// Box With Toggle
+// ==============================================
+
+.box[data-toggle] .box_header {
+    padding-left: (15px + 11px + 15px);
+    cursor: pointer;
+    user-select: none;
+
+    // Arrow
+    &::before {
+        @include svg (arrow-11-down-dark);
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        width: 11px;
+        height: 11px;
+        margin-top: (11px / -2);
+        transition: transform 250ms linear;
+    }
+
+    &:hover {
+        background: $c-border;
+    }
+}
+
+// ----------------------------------------------
+// State: Hide
+
+.box[data-toggle='hide'] > .box_header {
+    border-bottom: 0;
+}
+
+// ----------------------------------------------
+// State: Show
+
+.box[data-toggle='show'] > .box_header {
+    &::before {
+        transform: rotate(180deg);
+    }
+}
+
+
+// ==============================================
+// Context: Inside Layout Component
+// ==============================================
+
+.fluid-list .box,
+.solid-list .box {
+    height: 100%;
+}

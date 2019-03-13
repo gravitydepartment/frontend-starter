@@ -1,0 +1,168 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-stepper-button-base:   $c-action-secondary-base !default;
+$c-stepper-button-hover:  $c-action-primary-base       !default;
+$c-stepper-button-active: $c-action-primary-hover      !default;
+
+$stepper-button-size-base: 40px !default;
+$stepper-button-size-l:    48px !default;
+
+$stepper-icon-size: 24px !default;
+
+$stepper-input-size-base: 60px !default;
+$stepper-input-size-l:    70px !default;
+
+
+// ==============================================
+// Stepper
+// ==============================================
+
+.stepper {
+    width: ($stepper-button-size-base + $stepper-input-size-base + $stepper-button-size-base);
+}
+
+// ----------------------------------------------
+// Modifier: Large
+
+.stepper--l {
+    min-width: ($stepper-button-size-l + $stepper-input-size-l + $stepper-button-size-l);
+}
+
+
+// ==============================================
+// Stepper - Label
+// ==============================================
+
+.stepper_label {
+    display: inline-block;
+    margin-bottom: 0.4em;
+}
+
+
+// ==============================================
+// Stepper - Liner
+// ==============================================
+
+.stepper_liner {
+    &::after {
+        @include clearfix;
+    }
+}
+
+
+// ==============================================
+// Stepper - Input
+// ==============================================
+
+.stepper_input {
+    float: left;
+    width: $stepper-input-size-base;
+    height: $stepper-button-size-base;
+    padding: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    font-family: $font-family-sans;
+    font-size: $font-size-xl;
+    text-align: center;
+
+    &:focus {
+        border-color: $c-input-focus;
+        box-shadow: $box-shadow-input-text;
+    }
+}
+
+// ----------------------------------------------
+// Modifier: Large
+
+.stepper--l .stepper_input {
+    width: $stepper-input-size-l;
+    height: $stepper-button-size-l;
+}
+
+
+// ==============================================
+// Stepper - Button
+// ==============================================
+
+.stepper_button {
+    @include image-replacement;
+    position: relative;
+    float: left;
+    width: $stepper-button-size-base;
+    height: $stepper-button-size-base;
+    padding: 0;
+    border: 1px solid black(0.15);
+    border-radius: $radius-base;
+    background: $c-stepper-button-base;
+    user-select: none;
+
+    &:hover {
+        background: $c-stepper-button-hover;
+        box-shadow: none; // Prevent styles from ".button"
+    }
+
+    &:focus,
+    &:active {
+        background: $c-stepper-button-active;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &::before {
+        @include image-replacement-override;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $stepper-icon-size;
+        height: $stepper-icon-size;
+        margin-top: ($stepper-icon-size / -2);
+        margin-left: ($stepper-icon-size / -2);
+    }
+}
+
+// ----------------------------------------------
+// Modifier: Down
+
+.stepper_button--down {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &::before {
+        @include svg (stepper-down);
+    }
+}
+
+// ----------------------------------------------
+// Modifier: Large
+
+.stepper--l .stepper_button {
+    width: $stepper-button-size-l;
+    height: $stepper-button-size-l;
+}
+
+// ----------------------------------------------
+// Modifier: Up
+
+.stepper_button--up {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &::before {
+        @include svg (stepper-up);
+    }
+}

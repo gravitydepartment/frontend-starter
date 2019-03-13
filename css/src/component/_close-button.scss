@@ -1,0 +1,52 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-close-button-base:  $c-action-secondary-base !default;
+$c-close-button-hover: $c-action-default-base   !default;
+
+$close-button-size: 24px !default;
+
+
+// ==============================================
+// Close Button
+// ==============================================
+
+.close-button {
+    @include image-replacement;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: $close-button-size;
+    height: $close-button-size;
+    border: 0;
+    border-radius: ($close-button-size / 2);
+    background: transparent;
+
+    &:focus {
+        @include focus;
+    }
+
+    &:hover {
+        opacity: 0.75;
+    }
+
+    &::before {
+        content: '';
+        @include svg (remove-dark);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $close-button-size;
+        height: $close-button-size;
+    }
+}

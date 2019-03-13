@@ -1,0 +1,262 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+// If you change this, also change the JS.
+// See: /js/src/vendor/gravdept/tab-accordion.js
+$bp-tab-accordion: 800px !default;
+
+$c-tab-accordion-border: $c-border !default;
+
+$c-tab-accordion-nav-link-background-base:   $c-background !default;
+$c-tab-accordion-nav-link-background-active: #FFF          !default;
+
+$c-tab-nav-item-active-border: $c-action-primary-base !default;
+
+
+// ==============================================
+// Tab Accordion
+// ==============================================
+
+.tab-accordion {
+    margin-bottom: $gap;
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-tab-accordion - 1px) {
+
+    .tab-accordion {
+        overflow: hidden;
+        border: 1px solid $c-tab-accordion-border;
+        border-radius: $radius-base;
+    }
+
+}
+
+
+// ==============================================
+// Tab Accordion - Nav
+// ==============================================
+
+.tab-accordion_nav {
+    &::after {
+        @include clearfix;
+    }
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-tab-accordion - 1px) {
+
+    .tab-accordion_nav {
+        display: none;
+    }
+
+}
+
+
+// ==============================================
+// Tab Accordion - Nav Link
+// ==============================================
+
+.tab-accordion_nav-link {
+    position: relative;
+    float: left;
+    display: block;
+    padding: 1em 1.25em;
+    border-top: 1px solid $c-tab-accordion-border;
+    border-right: 1px solid $c-tab-accordion-border;
+    background: $c-tab-accordion-nav-link-background-base;
+    color: $c-text-base;
+    font-size: $font-size-s;
+    line-height: $line-height-xs;
+    text-align: center;
+    text-decoration: none;
+
+    &:first-child {
+        border-left: 1px solid $c-tab-accordion-border;
+        border-top-left-radius: 3px;
+    }
+
+    &:last-child {
+        border-top-right-radius: 3px;
+    }
+}
+
+.no-touchevents .tab-accordion_nav-link {
+    &:hover {
+        background: $c-tab-accordion-border;
+        color: $c-text-base;
+    }
+}
+
+// ----------------------------------------------
+// State: Is Active
+
+.tab-accordion_nav-link.is-active {
+    background: $c-tab-accordion-nav-link-background-active;
+    color: $c-link-base;
+    cursor: default;
+
+    &:first-child {
+        border-top-left-radius: 0;
+    }
+
+    &:last-child {
+        border-top-right-radius: 0;
+    }
+
+    // Highlight the top edge
+    &::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -1px; // Cover border
+        width: calc(1px + 100% + 1px); // Include borders
+        height: 4px;
+        border-radius: 4px 4px 0 0;
+        background: $c-tab-nav-item-active-border;
+    }
+
+    // Hide the bottom border
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #FFF;
+    }
+}
+
+.no-touchevents .tab-accordion_nav-link.is-active {
+    &:hover {
+        background: $c-tab-accordion-nav-link-background-active;
+        color: $c-link-base;
+    }
+}
+
+
+// ==============================================
+// Tab Accordion - Section
+// ==============================================
+
+.tab-accordion_section {
+    background: #FFF;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-tab-accordion) {
+
+    .tab-accordion_section {
+        display: none;
+
+        &.is-active {
+            display: block;
+            padding: 20px;
+            border: 1px solid $c-tab-accordion-border;
+            border-radius: 0 0 3px 3px;
+        }
+    }
+
+}
+
+
+// ==============================================
+// Tab Accordion - Title
+// ==============================================
+
+@media (max-width: $bp-tab-accordion - 1px) {
+
+    .tab-accordion_title {
+        position: relative;
+        margin-bottom: 0;
+        padding: 15px $liner-base 15px ($liner-base + 11px + 10px);
+        border-bottom: 1px solid $c-tab-accordion-border;
+        background: $c-background;
+        font-size: $font-size-l;
+        cursor: pointer;
+
+        // Arrow
+        &::before {
+            @include svg (arrow-11-right-dark);
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: $liner-base;
+            width: 11px;
+            height: 11px;
+            margin-top: (11px / -2);
+            transition: transform 150ms linear;
+        }
+    }
+
+    .no-touchevents .tab-accordion_title {
+        &:hover {
+            background: $c-tab-accordion-border;
+        }
+    }
+
+    .tab-accordion_section:first-child .tab-accordion_title {
+        border-top: 1px solid $c-tab-accordion-border;
+    }
+
+    .tab-accordion_section:last-child:not(.is-active) .tab-accordion_title {
+        border-bottom: 0;
+    }
+
+    // ----------------------------------------------
+    // State: Is Active
+
+    .tab-accordion_section.is-active .tab-accordion_title {
+        // Arrow
+        &::before {
+            transform: rotate(90deg);
+        }
+    }
+
+}
+
+
+// ==============================================
+// Tab Accordion - Body
+// ==============================================
+
+.tab-accordion_body > *:last-child {
+    margin-bottom: 0;
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-tab-accordion - 1px) {
+
+    .tab-accordion_body {
+        display: none;
+    }
+
+    // ----------------------------------------------
+    // State: Is Active
+
+    .tab-accordion_section.is-active .tab-accordion_body {
+        display: block;
+        padding: $liner-base;
+        border-bottom: 1px solid $c-tab-accordion-border;
+    }
+
+    .tab-accordion_section.is-active:last-child .tab-accordion_body {
+        border-bottom: 0;
+    }
+
+}

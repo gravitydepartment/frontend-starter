@@ -1,0 +1,257 @@
+/**
+* Gravity Department - Modal
+* https://github.com/gravitydepartment/modal
+*
+* @author     Brendan Falkowski
+* @copyright  2018 Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$modal-backdrop-opacity:             0.65  !default;
+$modal-backdrop-transition-duration: 300ms !default;
+
+$modal-close-button-size: 28px    !default;
+$modal-close-icon-size:   24px    !default;
+$modal-close-icon-svg:   'remove' !default;
+
+$modal-dialog-transition-duration: 500ms  !default;
+$modal-dialog-translate-y:         -250px !default; // Animate from this offset to final position
+$modal-dialog-width-s:             400px  !default;
+$modal-dialog-width-base:          600px  !default;
+$modal-dialog-width-l:             800px  !default;
+
+$z-modal-backdrop: 900 !default;
+$z-modal-dialog:   901 !default;
+
+
+// ==============================================
+// Modal
+// ==============================================
+
+//.modal {}
+
+
+// ==============================================
+// Modal - Dialog
+// ==============================================
+
+.modal_dialog {
+    position: absolute;
+    z-index: $z-modal-dialog;
+    right: $space-base;
+    left: $space-base;
+    margin-bottom: $gap;
+    border-radius: $radius-base;
+    background: #FFF;
+    box-shadow: 0 5px 15px 5px black(0.2);
+    opacity: 0;
+    transform: translateY($modal-dialog-translate-y);
+    transition:
+        opacity ($modal-dialog-transition-duration / 2) linear 0ms,
+        top $modal-dialog-transition-duration ease-out 0ms,
+        transform $modal-dialog-transition-duration ease-out 0ms,
+        visibility 0ms linear $modal-dialog-transition-duration;
+}
+
+[data-modal-state='opening'] .modal_dialog {
+    visibility: visible;
+}
+
+[data-modal-state='open'] .modal_dialog {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0ms;
+}
+
+[data-modal-state='closing'] .modal_dialog {
+    visibility: visible;
+    transform: translateY($modal-dialog-translate-y);
+    transition-delay: 0ms;
+}
+
+[data-modal-state='closed'] .modal_dialog {
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+}
+
+// ----------------------------------------------
+
+@media (min-width: 600px) {
+
+    .modal_dialog {
+        right: $space-xl;
+        left: $space-xl;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: 800px) {
+    .modal_dialog {
+        right: 5%;
+        left: 5%;
+    }
+}
+
+// ----------------------------------------------
+// Modifier: Small
+
+@media (min-width: 320px) {
+
+    .modal_dialog--s {
+        right: auto;
+        left: 50%;
+        width: $modal-dialog-width-s;
+        margin-left: ($modal-dialog-width-s / -2);
+    }
+
+}
+
+// ----------------------------------------------
+// Modifier: Medium
+
+@media (min-width: 550px) {
+
+    .modal_dialog--base {
+        right: auto;
+        left: 50%;
+        width: $modal-dialog-width-base;
+        margin-left: ($modal-dialog-width-base / -2);
+    }
+
+}
+
+// ----------------------------------------------
+// Modifier: Large
+
+@media (min-width: 800px) {
+
+    .modal_dialog--l {
+        right: auto;
+        left: 50%;
+        width: $modal-dialog-width-l;
+        margin-left: ($modal-dialog-width-l / -2);
+    }
+
+}
+
+
+// ==============================================
+// Modal - Header
+// ==============================================
+
+.modal_header {
+    position: relative;
+    padding: 10px (10px + $modal-close-button-size + $space-base) 10px $space-base;
+    border-bottom: 1px solid $c-border;
+    border-radius: $radius-base $radius-base 0 0;
+}
+
+.modal_header h1,
+.modal_header h2,
+.modal_header h3,
+.modal_header h4,
+.modal_header h5, {
+    margin: 0;
+    font-size: $font-size-xxl;
+    font-style: normal;
+    font-weight: bold;
+    line-height: $line-height-s;
+}
+
+
+// ==============================================
+// Modal - Subtitle
+// ==============================================
+
+//.modal_subtitle {}
+
+
+// ==============================================
+// Modal - Body
+// ==============================================
+
+.modal_body {
+    position: relative;
+    padding: $space-l $space-base;
+}
+
+.modal_body > *:last-child {
+    margin-bottom: 0;
+}
+
+
+// ==============================================
+// Modal - Footer
+// ==============================================
+
+.modal_footer {
+    padding: $space-base;
+    border-top: 1px solid $c-border;
+}
+
+
+// ==============================================
+// Modal - Close
+// ==============================================
+
+.modal_close {
+    @include image-replacement;
+    position: absolute;
+    top: 10px;
+    right: $space-base;
+    width: $modal-close-button-size;
+    height: $modal-close-button-size;
+    border: 0;
+    border-radius: ($modal-close-button-size / 2);
+    background: $c-action-secondary-base;
+
+    &:hover {
+        background: $c-action-primary-hover;
+    }
+
+    &::before {
+        @include svg ($modal-close-icon-svg);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $modal-close-icon-size;
+        height: $modal-close-icon-size;
+        margin-top: ($modal-close-icon-size / -2);
+        margin-left: ($modal-close-icon-size / -2);
+    }
+}
+
+
+// ==============================================
+// Modal Backdrop
+// ==============================================
+
+.modal_backdrop {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $z-modal-backdrop;
+    background: #000;
+    opacity: 0;
+    transition:
+        opacity $modal-backdrop-transition-duration linear 0ms,
+        visibility 0ms linear $modal-backdrop-transition-duration;
+}
+
+[data-modal-state='open'] .modal_backdrop {
+    visibility: visible;
+    opacity: $modal-backdrop-opacity;
+    transition-delay: 0ms;
+}

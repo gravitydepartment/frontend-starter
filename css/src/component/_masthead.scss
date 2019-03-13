@@ -1,0 +1,61 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Masthead
+// ==============================================
+
+.masthead {
+    margin-bottom: $gap;
+    text-align: center;
+}
+
+
+// ==============================================
+// Masthead - Heading
+// ==============================================
+
+.masthead_heading {
+    margin-bottom: 0.4em;
+    color: $c-text-base;
+    font-family: $font-family-special;
+    font-size: $font-size-xxl;
+    font-weight: bold;
+}
+
+// ----------------------------------------------
+
+@media (min-width: 600px) {
+
+    .masthead_heading {
+        font-size: $font-size-xxxl;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: 1000px) {
+
+    .masthead_heading {
+        font-size: $font-size-xxxxl;
+    }
+
+}
+
+
+// ==============================================
+// Masthead - Lead
+// ==============================================
+
+.masthead .lead {
+    max-width: 35em;
+    margin-right: auto;
+    margin-left: auto;
+}

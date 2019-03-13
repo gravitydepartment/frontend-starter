@@ -1,0 +1,122 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-callout: 750px !default;
+
+$callout-max-width: 600px !default;
+
+
+// ==============================================
+// Callout
+// ==============================================
+
+.callout {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $gap;
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-callout - 1px) {
+
+    .callout {
+        max-width: $callout-max-width;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-callout) {
+
+    .callout {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+
+// ==============================================
+// Callout - Media
+// ==============================================
+
+.callout_media {
+    display: flex;
+    align-items: center;
+    max-width: $callout-max-width;
+}
+
+// ----------------------------------------------
+
+@media (max-width: $bp-callout - 1px) {
+
+    .callout_media {
+        margin-bottom: 20px;
+    }
+
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-callout) {
+
+    .callout_media {
+        width: 50%;
+    }
+
+}
+
+
+// ==============================================
+// Callout - Body
+// ==============================================
+
+.callout_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: $callout-max-width;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-callout) {
+
+    .callout_body {
+        width: 50%;
+        padding-left: ($gutter * 2);
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Flip
+// ==============================================
+
+@media (min-width: $bp-callout) {
+
+    .callout--flip {
+        flex-direction: row-reverse;
+    }
+
+    .callout--flip .callout_body {
+        padding-right: ($gutter * 2);
+        padding-left: 0;
+    }
+
+}

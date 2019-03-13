@@ -1,0 +1,117 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// **********************************************
+// Extends vendor file.
+// See: /css/src/vendor/gravdept/_tabs.scss
+// **********************************************
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-tabs-border: $c-border !default;
+
+$c-tabs-nav-item-active-background:   #FFF          !default;
+$c-tabs-nav-item-inactive-background: $c-background !default;
+
+$c-tabs-nav-item-active-border: $c-action-primary-base !default;
+
+
+// ==============================================
+// Tabs - Nav
+// ==============================================
+
+.tabs_nav {
+    border-bottom: 1px solid $c-tabs-border;
+}
+
+
+// ==============================================
+// Tabs - Nav Link
+// ==============================================
+
+.tabs_nav-link {
+    padding: 1em 1.25em;
+    border-top: 1px solid $c-tabs-border;
+    border-right: 1px solid $c-tabs-border;
+    background: $c-tabs-nav-item-inactive-background;
+    color: $c-text-base;
+    font-size: $font-size-s;
+    line-height: $line-height-xs;
+
+    &:first-child {
+        border-left: 1px solid $c-tabs-border;
+        border-top-left-radius: 3px;
+    }
+
+    &:last-child {
+        border-top-right-radius: 3px;
+    }
+
+    &:hover {
+        background: $c-tabs-border;
+        color: $c-text-base;
+    }
+}
+
+// ----------------------------------------------
+// State: Is Active
+
+.tabs_nav-link.is-active {
+    background: $c-tabs-nav-item-active-background;
+    color: $c-link-base;
+    cursor: default;
+
+    &:first-child {
+        border-top-left-radius: 0;
+    }
+
+    &:last-child {
+        border-top-right-radius: 0;
+    }
+
+    &:hover {
+        background: #FFF;
+        color: $c-link-base;
+    }
+
+    // Highlight the top edge
+    &::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -1px; // Cover border
+        width: calc(1px + 100% + 1px); // Include borders
+        height: 4px;
+        border-radius: 4px 4px 0 0;
+        background: $c-tabs-nav-item-active-border;
+    }
+
+    // Hide the bottom border
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #FFF;
+    }
+}
+
+
+// ==============================================
+// Tabs - Item
+// ==============================================
+
+.tabs_item.is-active {
+    padding-top: 20px;
+}

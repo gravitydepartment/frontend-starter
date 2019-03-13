@@ -1,0 +1,46 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Action Group
+// ==============================================
+
+.action-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:  -0.8rem;
+    margin-left: -0.8rem;
+}
+
+// ----------------------------------------------
+// Modifier: Center
+
+.action-group--center {
+    justify-content: center;
+}
+
+
+// ==============================================
+// Action Group - *Any*
+// ==============================================
+
+.action-group > * {
+    margin-top:  0.8rem;
+    margin-left: 0.8rem;
+}
+
+
+// ==============================================
+// Action Group - Label
+// ==============================================
+
+.action-group_label {
+    white-space: nowrap;
+}

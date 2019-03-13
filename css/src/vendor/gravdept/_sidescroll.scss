@@ -1,0 +1,68 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-sidescroll-background: $c-border !default;
+
+$c-sidescroll-triangle: #FFF !default;
+
+
+// ==============================================
+// Sidescroll
+// ==============================================
+
+// Prevent from applying to "@media print".
+@media only screen {
+
+    [data-sidescroll='scroll'] {
+        position: relative;
+        overflow-x: hidden;
+        width: 100%;
+        margin-bottom: $margin-bottom;
+        padding-right: 15px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 100%;
+            background: $c-sidescroll-background;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 3px;
+            top: 9px;
+            @include triangle (right, 7px, $c-sidescroll-triangle);
+        }
+    }
+
+    [data-sidescroll='scroll'] .sidescroll_liner {
+        overflow-x: scroll;
+    }
+
+    // ----------------------------------------------
+    // Table Adjustments
+
+    [data-sidescroll='scroll'] table {
+        margin-bottom: 0;
+    }
+
+    [data-sidescroll='scroll'] th,
+    [data-sidescroll='scroll'] td {
+        white-space: nowrap;
+    }
+
+}

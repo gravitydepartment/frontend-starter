@@ -1,0 +1,17 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Mixin - Input Disabled
+// ==============================================
+
+@mixin input-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

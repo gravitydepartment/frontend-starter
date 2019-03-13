@@ -1,0 +1,43 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// **********************************************
+// Shame:
+// Workarounds for specific browsers / devices.
+// **********************************************
+
+
+// ==============================================
+// Enable click events to bubble to the "document" in iOS Safari.
+// See: /js/src/browser-detection.js
+// ==============================================
+
+.is-ios * {
+    cursor: pointer;
+}
+
+
+// ==============================================
+// Force "media" pattern not to scale down inside tables.
+// Browser: IE11
+// ==============================================
+
+table .media {
+    min-width: 270px;
+}
+
+
+// ==============================================
+// Disable "clear input" button in IE 10-11
+// See: http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs
+// ==============================================
+
+input::-ms-clear {
+    display: none;
+}

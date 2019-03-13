@@ -1,0 +1,193 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Margin
+// ==============================================
+
+.m-0 { margin: 0 !important; }
+
+// ----------------------------------------------
+// Top
+
+.m-t-xxxl { margin-top: $space-xxxl !important; }
+.m-t-xxl  { margin-top: $space-xxl  !important; }
+.m-t-xl   { margin-top: $space-xl   !important; }
+.m-t-l    { margin-top: $space-l    !important; }
+.m-t-base { margin-top: $space-base !important; }
+.m-t-s    { margin-top: $space-s    !important; }
+.m-t-xs   { margin-top: $space-xs   !important; }
+.m-t-xxs  { margin-top: $space-xxs  !important; }
+.m-t-xxxs { margin-top: $space-xxxs !important; }
+.m-t-0    { margin-top: 0           !important; }
+.m-t-auto { margin-top: auto        !important; }
+
+// ----------------------------------------------
+// Right
+
+.m-r-xxxl { margin-right: $space-xxxl !important; }
+.m-r-xxl  { margin-right: $space-xxl  !important; }
+.m-r-xl   { margin-right: $space-xl   !important; }
+.m-r-l    { margin-right: $space-l    !important; }
+.m-r-base { margin-right: $space-base !important; }
+.m-r-s    { margin-right: $space-s    !important; }
+.m-r-xs   { margin-right: $space-xs   !important; }
+.m-r-xxs  { margin-right: $space-xxs  !important; }
+.m-r-xxxs { margin-right: $space-xxxs !important; }
+.m-r-0    { margin-right: 0           !important; }
+.m-r-auto { margin-right: auto        !important; }
+
+// ----------------------------------------------
+// Bottom
+
+.m-b-xxxl { margin-bottom: $space-xxxl !important; }
+.m-b-xxl  { margin-bottom: $space-xxl  !important; }
+.m-b-xl   { margin-bottom: $space-xl   !important; }
+.m-b-l    { margin-bottom: $space-l    !important; }
+.m-b-base { margin-bottom: $space-base !important; }
+.m-b-s    { margin-bottom: $space-s    !important; }
+.m-b-xs   { margin-bottom: $space-xs   !important; }
+.m-b-xxs  { margin-bottom: $space-xxs  !important; }
+.m-b-xxxs { margin-bottom: $space-xxxs !important; }
+.m-b-0    { margin-bottom: 0           !important; }
+.m-b-auto { margin-bottom: auto        !important; }
+
+// ----------------------------------------------
+// Left
+
+.m-l-xxxl { margin-left: $space-xxxl !important; }
+.m-l-xxl  { margin-left: $space-xxl  !important; }
+.m-l-xl   { margin-left: $space-xl   !important; }
+.m-l-l    { margin-left: $space-l    !important; }
+.m-l-base { margin-left: $space-base !important; }
+.m-l-s    { margin-left: $space-s    !important; }
+.m-l-xs   { margin-left: $space-xs   !important; }
+.m-l-xxs  { margin-left: $space-xxs  !important; }
+.m-l-xxxs { margin-left: $space-xxxs !important; }
+.m-l-0    { margin-left: 0           !important; }
+.m-l-auto { margin-left: auto        !important; }
+
+// ----------------------------------------------
+// X (Right + Left)
+
+.m-x-xxxl {
+    margin-right: $space-xxxl !important;
+    margin-left:  $space-xxxl !important;
+}
+
+.m-x-xxl {
+    margin-right: $space-xxl !important;
+    margin-left:  $space-xxl !important;
+}
+
+.m-x-xl {
+    margin-right: $space-xl !important;
+    margin-left:  $space-xl !important;
+}
+
+.m-x-l {
+    margin-right: $space-l !important;
+    margin-left:  $space-l !important;
+}
+
+.m-x-base {
+    margin-right: $space-base !important;
+    margin-left:  $space-base !important;
+}
+
+.m-x-s {
+    margin-right: $space-s !important;
+    margin-left:  $space-s !important;
+}
+
+.m-x-xs {
+    margin-right: $space-xs !important;
+    margin-left:  $space-xs !important;
+}
+
+.m-x-xxs {
+    margin-right: $space-xxs !important;
+    margin-left:  $space-xxs !important;
+}
+
+.m-x-xxxs {
+    margin-right: $space-xxxs !important;
+    margin-left:  $space-xxxs !important;
+}
+
+.m-x-0 {
+    margin-right: 0 !important;
+    margin-left:  0 !important;
+}
+
+.m-x-auto {
+    margin-right: auto !important;
+    margin-left:  auto !important;
+}
+
+// ----------------------------------------------
+// Y (Top + Bottom)
+
+.m-y-xxxl {
+    margin-top:    $space-xxxl !important;
+    margin-bottom: $space-xxxl !important;
+}
+
+.m-y-xxl {
+    margin-top:    $space-xxl !important;
+    margin-bottom: $space-xxl !important;
+}
+
+.m-y-xl {
+    margin-top:    $space-xl !important;
+    margin-bottom: $space-xl !important;
+}
+
+.m-y-l {
+    margin-top:    $space-l !important;
+    margin-bottom: $space-l !important;
+}
+
+.m-y-base {
+    margin-top:    $space-base !important;
+    margin-bottom: $space-base !important;
+}
+
+.m-y-s {
+    margin-top:    $space-s !important;
+    margin-bottom: $space-s !important;
+}
+
+.m-y-xs {
+    margin-top:    $space-xs !important;
+    margin-bottom: $space-xs !important;
+}
+
+.m-y-xxs {
+    margin-top:    $space-xxs !important;
+    margin-bottom: $space-xxs !important;
+}
+
+.m-y-xxxs {
+    margin-top:    $space-xxxs !important;
+    margin-bottom: $space-xxxs !important;
+}
+
+.m-y-0 {
+    margin-top:    0 !important;
+    margin-bottom: 0 !important;
+}
+
+.m-y-auto {
+    margin-top:    auto !important;
+    margin-bottom: auto !important;
+}

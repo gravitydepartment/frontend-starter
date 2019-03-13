@@ -1,0 +1,77 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Base
+// ==============================================
+
+[type='email'],
+[type='number'],
+[type='password'],
+[type='tel'],
+[type='text'],
+[type='url'] {
+    width: 100%;
+    height: 40px;
+    padding: 0 6px;
+    font-size: 16px; // Prevent iOS zoom on focus.
+}
+
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    font-size: 16px; // Prevent iOS zoom on focus.
+}
+
+
+// ==============================================
+// Input Text
+// ==============================================
+
+.input-text {
+    max-width: $input-max-width-base;
+    border: 1px solid $c-input-border;
+    border-radius: $radius-base;
+    background: #FFF;
+    box-shadow: $box-shadow-input-text;
+    appearance: none;
+
+    &:disabled,
+    &[readonly] {
+        @include input-disabled;
+    }
+
+    &:focus {
+        @include focus;
+    }
+
+    &.validation-failed {
+        border-color: $c-danger;
+
+        &:focus {
+            @include focus-error;
+        }
+    }
+}
+
+// ----------------------------------------------
+// Modifier: Max Width
+
+.input-text--s   {
+    max-width: $input-max-width-s;
+}
+
+.input-text--xs  {
+    max-width: $input-max-width-xs;
+}
+
+.input-text--xxs {
+    max-width: $input-max-width-xxs;
+}

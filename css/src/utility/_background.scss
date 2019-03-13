@@ -1,0 +1,47 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable declaration-no-important */
+
+
+// ==============================================
+// Background
+// ==============================================
+
+.background-base {
+    background: $c-background !important;
+}
+
+// ----------------------------------------------
+// Color
+
+.background-blue {
+    background: $c-blue-base !important;
+}
+
+.background-gray-dark {
+    background: $c-contrast-background !important;
+}
+
+.background-gray-light {
+    background: $c-background !important;
+}
+
+.background-red {
+    background: $c-red !important;
+}
+
+// ----------------------------------------------
+// Image
+
+.background-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

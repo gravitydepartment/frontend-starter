@@ -1,0 +1,36 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// **********************************************
+// Extends vendor file.
+// See: /css/src/vendor/gravdept/_notify.scss
+// **********************************************
+
+
+// ==============================================
+// Notify - Item
+// ==============================================
+
+.notify_item {
+    border-left: 10px solid #000;
+    border-radius: $radius-base;
+    background: #FFF;
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.1),
+        0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+// ----------------------------------------------
+// Modifer: Status
+
+.notify_item--danger  { border-left-color: $c-danger; }
+.notify_item--help    { border-left-color: $c-help; }
+.notify_item--info    { border-left-color: $c-info; }
+.notify_item--success { border-left-color: $c-success; }
+.notify_item--warn    { border-left-color: $c-warn; }

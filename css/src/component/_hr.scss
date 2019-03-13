@@ -1,0 +1,47 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-hr-base:   #D0D0D0 !default;
+$c-hr-subtle: #E0E0E0 !default;
+
+
+// ==============================================
+// HR (Horizontal Rule)
+// ==============================================
+
+hr {
+    margin-bottom: $gap;
+    border: 0;
+    border-top: 1px solid $c-hr-base;
+}
+
+// ----------------------------------------------
+// Modifier: Dash
+
+.hr--dash {
+    border-style: dashed;
+}
+
+// ----------------------------------------------
+// Modifier: Subtle
+
+.hr--subtle {
+    border-color: $c-hr-subtle;
+}
+
+// ----------------------------------------------
+// Modifier: Thick
+
+.hr--thick {
+    border-top-width: 5px;
+}

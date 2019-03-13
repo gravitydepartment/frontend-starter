@@ -1,0 +1,22 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Heading Group
+// ==============================================
+
+.heading-group {
+    display: flex;
+    align-items: center;
+    margin: -1rem 0 $gap -1rem;
+}
+
+.heading-group > * {
+    margin: 1rem 0 0 1rem;
+}

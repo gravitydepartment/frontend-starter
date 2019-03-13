@@ -1,0 +1,45 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-payment-icon-border: $c-border !default;
+
+$payment-icon-height: 1px + 30px + 1px !default; // With spacers for border
+$payment-icon-width:  1px + 46px + 1px !default; // With spacers for border
+
+
+// ==============================================
+// Payment Icon
+// ==============================================
+
+.payment-icon {
+    @include image-replacement;
+    display: block;
+    width:  $payment-icon-width;
+    height: $payment-icon-height;
+    border: 1px solid $c-payment-icon-border;
+    border-radius: $radius-base;
+    @include svg (credit-card);
+    background-color: #FFF;
+}
+
+// ----------------------------------------------
+// Modifier: Type
+
+.payment-icon--american-express   { @include svg(american-express); }
+.payment-icon--american-express-2 { @include svg(american-express-2); }
+.payment-icon--discover           { @include svg(discover); }
+.payment-icon--discover-2         { @include svg(discover-2); }
+.payment-icon--mastercard         { @include svg(mastercard); }
+.payment-icon--paypal             { @include svg(paypal); }
+.payment-icon--paypal-2           { @include svg(paypal-2); }
+.payment-icon--visa               { @include svg(visa); }

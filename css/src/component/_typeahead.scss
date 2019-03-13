@@ -1,0 +1,37 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// **********************************************
+// Extends vendor file.
+// See: /css/src/vendor/gravdept/_typeahead.scss
+// **********************************************
+
+
+// ==============================================
+// Typeahead - Button
+// ==============================================
+
+.typeahead_button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: (30px / -2);
+}
+
+
+// ==============================================
+// Typeahead - Link
+// ==============================================
+
+// ----------------------------------------------
+// Modifier: Has Button
+
+.typeahead_link--has-button {
+    padding-right: (15px + 85px + 15px); // Magic number. Space for "add to cart" button.
+}

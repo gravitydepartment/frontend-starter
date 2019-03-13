@@ -1,0 +1,103 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$bp-section: 900px !default;
+
+
+// ==============================================
+// Section
+// ==============================================
+
+.section {
+    padding-top: $gap;
+    padding-bottom: $gap;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-section) {
+
+    .section {
+        padding-top: ($gap * 2);
+        padding-bottom: ($gap * 2);
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Padding X
+// ==============================================
+
+.section--p-x {
+    padding-right: $liner-base;
+    padding-left: $liner-base;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-section) {
+
+    .section--p-x {
+        padding-right: $liner-l;
+        padding-left: $liner-l;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Margin Bottom
+// ==============================================
+
+.section--m-b {
+    margin-bottom: $gap;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-section) {
+
+    .section--m-b {
+        margin-bottom: ($gap * 2);
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Margin Top
+// ==============================================
+
+.section--m-t {
+    margin-top: $gap;
+}
+
+// ----------------------------------------------
+
+@media (min-width: $bp-section) {
+
+    .section--m-t {
+        margin-top: ($gap * 2);
+    }
+
+}
+
+
+// ==============================================
+// Section - Misc.
+// ==============================================
+
+.section > *:last-child {
+    margin-bottom: 0;
+}

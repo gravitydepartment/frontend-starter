@@ -1,0 +1,31 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Required
+// ==============================================
+
+.required {
+    // Recreate the "asterisk" using pseudo-content.
+    &::after {
+        content: ' *';
+        color: $c-danger;
+        font-weight: normal;
+    }
+}
+
+// Remove all "* Required fields" messaging.
+p.required { /* stylelint-disable-line selector-no-qualifying-type */
+    display: none;
+}
+
+// Hide "<em>" because Magento chose stupid source order.
+.required em {
+    display: none;
+}

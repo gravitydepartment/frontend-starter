@@ -1,0 +1,84 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-note-danger-background: $c-library-red-1 !default;
+$c-note-danger-border:     $c-library-red-3 !default;
+
+$c-note-warn-background: $c-library-yellow-1 !default;
+$c-note-warn-border:     $c-library-yellow-3 !default;
+
+
+// ==============================================
+// Note
+// ==============================================
+
+.note {
+    position: relative;
+    margin-bottom: $margin-bottom;
+    padding: 6px 10px;
+    border: 1px solid $c-border;
+    border-radius: $radius-base;
+    background: $c-background;
+}
+
+// ----------------------------------------------
+// Modifier: Action
+
+.note--action {
+    display: flex;
+    align-items: center;
+}
+
+// ----------------------------------------------
+// Modifier: Danger
+
+.note--danger {
+    border-color: $c-note-danger-border;
+    background:   $c-note-danger-background;
+}
+
+// ----------------------------------------------
+// Modifier: Small
+
+.note--s {
+    margin-bottom: 15px;
+    padding: 4px 8px;
+    font-size: $font-size-xs;
+}
+
+// ----------------------------------------------
+// Modifier: Warn
+
+.note--warn {
+    border-color: $c-note-warn-border;
+    background:   $c-note-warn-background;
+}
+
+
+// ==============================================
+// Note - Body
+// ==============================================
+
+.note_body {
+    flex: 1;
+    margin-right: 2em;
+}
+
+
+// ==============================================
+// Note - Misc.
+// ==============================================
+
+.note > *:last-child {
+    margin-bottom: 0;
+}

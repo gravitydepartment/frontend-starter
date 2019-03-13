@@ -1,0 +1,162 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$solid-list-spacer-s:    ($gutter / 2) !default;
+$solid-list-spacer-base: ($gutter * 1) !default;
+$solid-list-spacer-l:    ($gutter * 2) !default;
+$solid-list-spacer-xl:   ($gutter * 3) !default;
+
+
+// ==============================================
+// Solid List
+// ==============================================
+
+.solid-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: ($solid-list-spacer-base * -1);
+    margin-bottom: $gap;
+    margin-left: ($solid-list-spacer-base * -1);
+}
+
+
+// ==============================================
+// Solid List - Item
+// ==============================================
+
+.solid-list_item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: $solid-list-spacer-base;
+    margin-left: $solid-list-spacer-base;
+}
+
+
+// ==============================================
+// Solid List - Misc.
+// ==============================================
+
+.solid-list_item > *:last-child {
+    margin-bottom: 0;
+}
+
+// Center image only when text is centered
+.solid-list_item.text-center img {
+    margin: 0 auto;
+}
+
+
+// ==============================================
+// Modifier: Center
+// ==============================================
+
+.solid-list--center {
+    justify-content: center;
+    margin-left: ($solid-list-spacer-base / -2);
+}
+
+.solid-list--center.solid-list--spacer-0 {
+    margin-left: 0;
+}
+
+.solid-list--center.solid-list--spacer-s {
+    margin-left: ($solid-list-spacer-s / -2);
+}
+
+.solid-list--center.solid-list--spacer-l {
+    margin-left: ($solid-list-spacer-l / -2);
+}
+
+.solid-list--center.solid-list--spacer-xl {
+    margin-left: ($solid-list-spacer-xl / -2);
+}
+
+
+// ==============================================
+// Modifier: Spacer
+// ==============================================
+
+// ----------------------------------------------
+// Modifier: Spacer 0
+
+.solid-list--spacer-0 {
+    margin-top:  0;
+    margin-left: 0;
+}
+
+.solid-list--spacer-0 .solid-list_item {
+    margin-top:  0;
+    margin-left: 0;
+}
+
+// ----------------------------------------------
+// Modifier: Spacer S
+
+.solid-list--spacer-s {
+    margin-top:  ($solid-list-spacer-s * -1);
+    margin-left: ($solid-list-spacer-s * -1);
+}
+
+.solid-list--spacer-s .solid-list_item {
+    margin-top:  $solid-list-spacer-s;
+    margin-left: $solid-list-spacer-s;
+}
+
+// ----------------------------------------------
+// Modifier: Spacer L
+
+.solid-list--spacer-l {
+    margin-top:  ($solid-list-spacer-l * -1);
+    margin-left: ($solid-list-spacer-l * -1);
+}
+
+.solid-list--spacer-l .solid-list_item {
+    margin-top:  $solid-list-spacer-l;
+    margin-left: $solid-list-spacer-l;
+}
+
+// ----------------------------------------------
+// Modifier: Spacer XL
+
+.solid-list--spacer-xl {
+    margin-top:  ($solid-list-spacer-xl * -1);
+    margin-left: ($solid-list-spacer-xl * -1);
+}
+
+.solid-list--spacer-xl .solid-list_item {
+    margin-top:  $solid-list-spacer-xl;
+    margin-left: $solid-list-spacer-xl;
+}
+
+
+// ==============================================
+// Modifier: Width
+// ==============================================
+
+.solid-list--width-100 .solid-list_item {
+    width: 100px;
+}
+
+.solid-list--width-150 .solid-list_item {
+    width: 150px;
+}
+
+.solid-list--width-200 .solid-list_item {
+    width: 200px;
+}
+
+.solid-list--width-250 .solid-list_item {
+    width: 250px;
+}

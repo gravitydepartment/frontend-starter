@@ -1,0 +1,32 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Input Radio
+// ==============================================
+
+// ----------------------------------------------
+// Label After Radio
+
+[type='radio'] + label {
+    font-size: $font-size-base;
+    font-weight: normal;
+    line-height: $line-height-xs;
+}
+
+[type='radio'][disabled] + label {
+    color: $c-text-subtle;
+}
+
+// ----------------------------------------------
+// Label Around Radio
+
+label > [type='radio'] {
+    margin-right: 0.5em;
+}

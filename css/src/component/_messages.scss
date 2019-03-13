@@ -1,0 +1,80 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+/* stylelint-disable selector-max-compound-selectors, selector-max-type */
+
+
+// ==============================================
+// Messages
+// ==============================================
+
+.messages {
+    margin-bottom: $margin-bottom;
+}
+
+.messages > li > ul > li {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+    padding: 15px 15px 15px (10px + 15px);
+    border-radius: $radius-base;
+    background: $c-background;
+    box-shadow: inset 0 0 0 1px $c-border;
+    line-height: $line-height-xs;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 100%;
+    }
+}
+
+
+// ==============================================
+// Messages - Types
+// ==============================================
+
+.messages .error-msg > ul > li {
+    &::before {
+        background: $c-danger;
+    }
+}
+
+.messages .notice-msg > ul > li,
+.messages .warning-msg > ul > li {
+    &::before {
+        background: $c-warn;
+    }
+}
+
+.messages .success-msg > ul > li {
+    &::before {
+        background: $c-success;
+    }
+}
+
+
+// ==============================================
+// Messages - Misc.
+// ==============================================
+
+//.messages a {}
+
+.messages p {
+    margin-bottom: 1em;
+}
+
+.messages ul > li ol:last-child,
+.messages ul > li p:last-child,
+.messages ul > li ul:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,45 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Row
+// ==============================================
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+// ----------------------------------------------
+// Modifier: Center
+
+.row--center {
+    justify-content: center;
+}
+
+
+// ==============================================
+// Row - Item
+// ==============================================
+
+//.row_item {}
+
+// ----------------------------------------------
+// Modifier: Grow
+
+.row_item--grow {
+    flex: 1;
+}
+
+// ----------------------------------------------
+// Modifier: Pad
+
+.row_item--pad {
+    margin-right: 0.75em;
+}

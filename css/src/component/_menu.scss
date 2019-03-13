@@ -1,0 +1,140 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Menu
+// ==============================================
+
+.menu {
+    @include menu;
+    max-width: 400px;
+}
+
+
+// ==============================================
+// Menu - Actions
+// ==============================================
+
+.menu_actions {
+    &::after {
+        @include clearfix;
+    }
+}
+
+.menu_actions .button {
+    float: left;
+    width: calc(50% - 8px);
+
+    &:first-child {
+        margin-right: 16px;
+    }
+}
+
+
+// ==============================================
+// Menu - Box
+// ==============================================
+
+.menu_box {
+    padding: $liner-base;
+    border-bottom: 1px solid $c-border;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+.menu_box h1 {
+    @include h3;
+}
+
+.menu_box p {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// ==============================================
+// Menu - Empty
+// ==============================================
+
+.menu_empty {
+    padding: 20px;
+    font-size: $font-size-xxl;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+// ==============================================
+// Menu - List
+// ==============================================
+
+.menu_list {
+    &:first-child {
+        padding-top: 5px;
+    }
+
+    &:last-child {
+        padding-bottom: 5px;
+    }
+}
+
+.menu_list-item {
+    border-bottom: 1px solid $c-border;
+}
+
+.menu_list-item a {
+    display: block;
+    padding: 12px $liner-base;
+    color: $c-text-base;
+    line-height: $line-height-xs;
+}
+
+.no-touchevents .menu_list-item a:hover {
+    background: $c-border;
+    color: $c-text-base;
+}
+
+
+// ==============================================
+// Menu - Product List
+// ==============================================
+
+.menu_product-list:not(:last-child) {
+    border-bottom: 1px solid $c-border;
+}
+
+.menu_product-list-item {
+    position: relative;
+    min-height: (15px + 75px + 15px);
+    padding: 15px (30px + 15px) 15px (15px + 75px + 15px);
+    border-top: 1px solid $c-border;
+    line-height: $line-height-xs;
+}
+
+.menu_product-list .product-image {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+//.menu_product-list .product-name {}
+
+.menu_product-list-price {
+    margin-bottom: 0.5em;
+}
+
+.menu_product-list .remove-button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: (24px / -2);
+}

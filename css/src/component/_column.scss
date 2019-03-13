@@ -1,0 +1,39 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Column
+// ==============================================
+
+//.column {}
+
+// ---------------------------------------------
+
+@media (min-width: 700px) {
+
+    .column {
+        column-count: 2;
+        column-gap: $gutter * 2;
+        margin-bottom: $gap;
+    }
+
+}
+
+
+// ==============================================
+// Modifier: Three
+// ==============================================
+
+@media (min-width: 1000px) {
+
+    .column--3 {
+        column-count: 3;
+    }
+
+}

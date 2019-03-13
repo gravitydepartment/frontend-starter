@@ -1,0 +1,129 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$c-tooltip-background: $c-slate !default;
+
+
+// ==============================================
+// Tooltip Wrapper
+// ==============================================
+
+.tooltip-wrapper {
+    position: relative;
+}
+
+
+// ==============================================
+// Tooltip
+// ==============================================
+
+.tooltip {
+    display: none;
+    position: absolute;
+    z-index: $z-tooltip;
+    width: 220px;
+    padding: 5px 8px;
+    border-radius: $radius-base;
+    background: $c-tooltip-background;
+    color: #FFF;
+    font-size: $font-size-xs;
+    font-style: normal;
+    font-weight: normal;
+    line-height: $line-height-xs;
+    text-align: left;
+}
+
+.tooltip-wrapper:hover .tooltip {
+    display: block;
+}
+
+
+// ==============================================
+// Modifier: Vertical Alignment
+// ==============================================
+
+.tooltip--top {
+    bottom: 100%;
+    margin-bottom: 10px;
+}
+
+.tooltip--bottom {
+    top: 100%;
+    margin-top: 10px;
+}
+
+
+// ==============================================
+// Modifier: Horizontal Alignment
+// ==============================================
+
+.tooltip--right {
+    right: 0;
+}
+
+.tooltip--center {
+    left: 50%;
+    margin-left: (220px / -2);
+}
+
+.tooltip--left {
+    left: 0;
+}
+
+
+// ==============================================
+// Arrows - Top
+// ==============================================
+
+.tooltip--top.tooltip--left::before {
+    @include triangle (down, 5px, $c-tooltip-background);
+    top: 100%;
+    left: 10px;
+}
+
+.tooltip--top.tooltip--center::before {
+    @include triangle (down, 5px, $c-tooltip-background);
+    top: 100%;
+    left: 50%;
+    margin-left: (5px / -2);
+}
+
+.tooltip--top.tooltip--right::before {
+    @include triangle (down, 5px, $c-tooltip-background);
+    top: 100%;
+    right: 10px;
+}
+
+
+// ==============================================
+// Arrows - Bottom
+// ==============================================
+
+.tooltip--bottom.tooltip--left::before {
+    @include triangle (up, 5px, $c-tooltip-background);
+    bottom: 100%;
+    left: 10px;
+}
+
+.tooltip--bottom.tooltip--center::before {
+    @include triangle (up, 5px, $c-tooltip-background);
+    left: 50%;
+    bottom: 100%;
+    margin-left: (5px / -2);
+}
+
+.tooltip--bottom.tooltip--right::before {
+    @include triangle (up, 5px, $c-tooltip-background);
+    right: 10px;
+    bottom: 100%;
+}

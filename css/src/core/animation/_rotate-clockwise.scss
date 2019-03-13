@@ -1,0 +1,17 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author     Brendan Falkowski
+* @copyright  Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Animation - Rotate Clockwise
+// ==============================================
+
+@keyframes rotate-clockwise {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

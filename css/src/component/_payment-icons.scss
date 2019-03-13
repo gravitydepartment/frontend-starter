@@ -1,0 +1,29 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Vars
+// ==============================================
+
+$payment-icons-spacer: 8px !default;
+
+
+// ==============================================
+// Payment Icons
+// ==============================================
+
+.payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: ($payment-icons-spacer * -1) 0 $gap ($payment-icons-spacer * -1);
+}
+
+.payment-icons .payment-icon {
+    margin: $payment-icons-spacer 0 0 $payment-icons-spacer;
+}

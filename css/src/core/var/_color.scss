@@ -1,0 +1,164 @@
+/**
+* Gravity Department - Frontend Starter
+* https://github.com/gravitydepartment/frontend-starter
+*
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
+*/
+
+
+// ==============================================
+// Units
+// ==============================================
+
+// Hex is the percentage difference between 101010 and 202020.
+// Used with Sass functions darken() and lighten().
+$hex: 6.1% !default;
+
+
+// ==============================================
+// Named Colors
+// ==============================================
+
+// Named colors are rarely used in other partials. They establish the standard
+// palette to be referenced from other variables in this file.
+
+// Primary + secondary colors
+$c-blue-base:    $c-library-blue-5   !default;
+$c-blue-mid:     $c-library-blue-8   !default;
+$c-blue-dark:    hsl(207, 66%, 25%)  !default; // Same hue as $c-blue-base
+$c-green:        $c-library-green-6  !default;
+$c-orange:       $c-library-orange-6 !default;
+$c-purple:       $c-library-violet-3 !default;
+$c-red:          $c-library-red-6    !default;
+$c-yellow-base:  $c-library-yellow-5 !default;
+$c-yellow-light: $c-library-yellow-0 !default;
+
+// Fancy colors
+$c-concrete: hsl(220, 13%, 67%) !default;
+$c-slate:    hsl(220, 13%, 45%) !default;
+
+
+// ==============================================
+// UI State Colors
+// ==============================================
+
+$c-danger:   $c-red         !default;
+$c-help:     $c-purple      !default;
+$c-info:     $c-blue-base   !default;
+$c-security: #E0F2FF        !default;
+$c-success:  $c-green       !default;
+$c-warn:     $c-yellow-base !default;
+
+
+// ==============================================
+// Tone Colors
+// ==============================================
+
+// Tone colors set the mood. The default tone defines the standard for
+// backgrounds and borders of most elements. Other tones attract/divert
+// attention relative to the default tone. Use these variables liberally in
+// partials to keep the UI consistent.
+
+// ----------------------------------------------
+// Default - Baseline for most elements.
+
+$c-background: #F4F4F8 !default; // Tint blue +4
+$c-border:     #DBDBDF !default; // Tint blue +4
+
+// ----------------------------------------------
+// Contrast - Opposite of the default tone (light/dark).
+
+$c-contrast-background: #505054 !default; // Tint blue +4
+$c-contrast-border:     darken($c-contrast-background, 10%) !default;
+
+// ----------------------------------------------
+// Emphasis - Like the default tone but more priority.
+
+$c-emphasis-background: #E8E8E8 !default;
+$c-emphasis-border:     #C0C0C0 !default;
+
+// ----------------------------------------------
+// Help - Distinguish "help" elements from other call-to-action colors.
+
+$c-help-background: $c-purple !default;
+$c-help-border:     darken($c-purple, 10%) !default;
+
+// ----------------------------------------------
+// Offset
+
+$c-offset-background: #808084 !default; // Tint blue +4
+$c-offset-border:     darken($c-offset-background, 10%) !default;
+
+// ----------------------------------------------
+// Priority - Highlight with a color that stands out from the default tone.
+
+$c-priority-background: $c-yellow-light !default;
+
+// ----------------------------------------------
+// Subtle - Like the default tone but less priority.
+
+$c-subtle-background: #FBFBFB !default;
+$c-subtle-border:     #EBEBEB !default;
+
+
+// ==============================================
+// Action Colors
+// ==============================================
+
+// Highest priority
+$c-action-danger-base:   $c-danger             !default;
+$c-action-danger-hover:  darken($c-danger, 5%) !default;
+$c-action-danger-focus:  darken($c-danger, 5%) !default;
+$c-action-danger-active: darken($c-danger, 5%) !default;
+
+// High priority
+$c-action-primary-base:   $c-blue-base             !default;
+$c-action-primary-hover:  darken($c-blue-base, 5%) !default;
+$c-action-primary-focus:  $c-blue-mid              !default;
+$c-action-primary-active: darken($c-blue-base, 5%) !default;
+
+// Default priority
+$c-action-default-base:   $c-slate             !default;
+$c-action-default-hover:  darken($c-slate, 5%) !default;
+$c-action-default-focus:  darken($c-slate, 5%) !default;
+$c-action-default-active: darken($c-slate, 5%) !default;
+
+// Low priority
+$c-action-secondary-base:   $c-concrete             !default;
+$c-action-secondary-hover:  darken($c-concrete, 5%) !default;
+$c-action-secondary-focus:  darken($c-concrete, 5%) !default;
+$c-action-secondary-active: darken($c-concrete, 5%) !default;
+
+// Lowest priority
+$c-action-disabled-base: $c-background !default;
+$c-action-disabled-text: #A4A4A8       !default;
+
+// Help
+$c-action-help-base:   $c-help-background             !default;
+$c-action-help-hover:  darken($c-help-background, 4%) !default;
+$c-action-help-focus:  darken($c-help-background, 4%) !default;
+$c-action-help-active: darken($c-help-background, 4%) !default;
+
+
+// ==============================================
+// Input Colors
+// ==============================================
+
+$c-input-border:      #C0C0C0          !default;
+$c-input-focus:       #B4DEFA          !default;
+$c-input-focus-error: $c-library-red-2 !default;
+
+
+// ==============================================
+// Text Colors
+// ==============================================
+
+$c-text-base:     #404048    !default; // Tint blue +8
+$c-text-danger:   $c-danger  !default;
+$c-text-subtle:   #888       !default;
+$c-text-success:  $c-success !default;
+$c-text-disabled: #A4A4A8    !default; // Tint blue +4
+
+$c-text-contrast-base:   white(0.9) !default;
+$c-text-contrast-subtle: white(0.7) !default;
