@@ -1,0 +1,29 @@
+# -----------------------------------------------
+# Root paths
+
+/css/build/
+/css/map/
+/img/build/
+/img/design/
+/js/build/
+/js/map/
+
+
+# -----------------------------------------------
+# Global files
+
+Thumbs.db
+
+
+# -----------------------------------------------
+# Global paths
+
+node_modules
+
+
+# -----------------------------------------------
+# Hidden directories and paths
+
+.git
+.idea
+.sass-cache
