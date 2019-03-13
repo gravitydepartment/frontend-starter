@@ -106,8 +106,7 @@ var task = {
             path.assets + 'js/src/app-components.js',
             path.assets + 'js/src/app-header.js',
             path.assets + 'js/src/app-footer.js',
-            path.assets + 'js/src/browser-detection.js', // Needs: user-agent.js
-            path.assets + 'js/src/search-typeahead.js'
+            path.assets + 'js/src/browser-detection.js' // Needs: user-agent.js
         ],
         uglifyOptions: {
             mangle: false
