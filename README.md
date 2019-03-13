@@ -60,9 +60,8 @@ Gulp powers the frontend build system. All the frontend assets (CSS, JS, images)
 
 #### Install build tools
 
-* Install Node 8.9.3
+* Install Node 10.15.0+
   * https://nodejs.org/en/
-  * Note: Node 10+ will break some build dependencies
 * Run commands:
   * `cd /your/project/path`
   * `npm install`
