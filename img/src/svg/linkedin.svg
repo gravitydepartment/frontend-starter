@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #0075B6;">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="linkedin" fill="#FFFFFF">
+            <path d="M24.5584767,19.5830989 C26.1904067,19.5830989 26.8432188,20.8114205 26.8432188,22.6120869 L27,29 L31,29 L31,21 C31,16.8857766 29.1278004,16.0689655 26.1606148,16.0689655 C23.7276358,16.0689655 22.6595438,17.411439 22.0661147,18.325843 L22,18.3986579 L22,16 L18,16 L18,29 L22,29 L22,21.719289 C22,21.719289 22.0661147,19.5830989 24.5584767,19.5830989 Z" id="Combined-Shape"></path>
+            <circle id="Oval" cx="13" cy="12" r="2"></circle>
+            <rect id="Rectangle-2" x="11" y="16" width="4" height="13"></rect>
+        </g>
+    </g>
+</svg>

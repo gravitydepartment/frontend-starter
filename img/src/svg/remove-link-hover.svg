@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>remove-link-hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="remove-link-hover">
+            <circle id="Oval-6" fill="#FF0000" cx="7.5" cy="7.5" r="7.5"></circle>
+            <path d="M4.5,4.5 L10.5,10.5" id="Line" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" transform="translate(7.500000, 7.500000) scale(-1, 1) translate(-7.500000, -7.500000) "></path>
+            <path d="M4.5,4.5 L10.5,10.5" id="Line" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>
