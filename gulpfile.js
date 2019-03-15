@@ -191,14 +191,13 @@ const js = gulp.parallel(
     jsThing
 );
 
-const lint        = gulp.parallel(lintCss, lintJs);
-const build       = gulp.parallel(css, image, js, lint);
-const defaultPlan = gulp.series(clean, build);
+const lint  = gulp.parallel(lintCss, lintJs);
+const build = gulp.parallel(css, image, js, lint);
 
 exports.build   = build;
 exports.clean   = clean;
 exports.css     = css;
-exports.default = defaultPlan;
+exports.default = gulp.series(clean, build);
 exports.image   = image;
 exports.js      = js;
 exports.lint    = lint;
