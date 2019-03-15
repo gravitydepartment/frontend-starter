@@ -19,7 +19,12 @@
 
 var beeper = require('beeper');
 var color  = require('ansi-colors');
+var minimist = require('minimist');
 var notify = require('gulp-notify');
+var PluginError = require('plugin-error');
+
+var arguments = minimist(process.argv.slice(2));
+var showProperties = (arguments['show-properties']) ? true : false;
 
 module.exports = function (error) {
     if (typeof error !== 'undefined') {
@@ -67,11 +72,6 @@ module.exports = function (error) {
         }
 
         // ----------------------------------------------
-        // Show error in console
-
-        console.error(report.join(''));
-
-        // ----------------------------------------------
         // Fire Mac/Windows notification for error
 
         notify({
@@ -81,5 +81,11 @@ module.exports = function (error) {
         }).write(error);
 
         beeper(); // Fallback to system sound (for Windows).
+
+        var customError = new PluginError(error.plugin, report.join(''), {
+            error: error,
+            showProperties: showProperties
+        });
+        throw customError;
     }
 };

@@ -21,15 +21,14 @@ var gulpif       = require('gulp-if');
 var imagemin     = require('gulp-imagemin');
 var minimist     = require('minimist');
 var notify       = require('gulp-notify');
-var pump         = require('pump');
+var pipeline     = require('stream').pipeline;
 var sass         = require('gulp-sass');
 var stylelint    = require('gulp-stylelint');
 var uglify       = require('gulp-uglify');
 
 // GravDept modules
 var config       = require('./gulp/config.js');
-var errorHandler = require('./gulp/error-handler.js');
-
+var errorFormatter = require('./gulp/error-formatter');
 
 // ==============================================
 // Notifications
@@ -62,18 +61,16 @@ function clean () {
 // CSS
 // ==============================================
 
-function css (cb) {
+function css () {
     var task = config.task.css;
 
-    pump([
+    return pipeline([
         gulp.src(task.src, { sourcemaps: true }),
         sass(task.sassOptions),
         autoprefixer(task.autoprefixerOptions),
         gulp.dest(task.dest, { sourcemaps: task.mapDest }),
         gulpif(!isSilent, notify(task.notifyOptions))
-    ], errorHandler);
-
-    cb();
+    ], errorFormatter);
 };
 
 
@@ -81,22 +78,21 @@ function css (cb) {
 // Image
 // ==============================================
 
-// Don't use "pump" for error handling.
-// See: https://github.com/sindresorhus/gulp-imagemin/issues/285
 function image () {
     var task = config.task.image;
 
-    return gulp
-    .src(task.src)
-    .pipe(changed(task.dest))
-    .pipe(imagemin([
-        imagemin.gifsicle(task.imageminOptions.gif),
-        imagemin.jpegtran(task.imageminOptions.jpg),
-        imagemin.optipng(task.imageminOptions.png),
-        imagemin.svgo(task.imageminOptions.svg)
-    ]))
-    .pipe(gulp.dest(task.dest))
-    .pipe(gulpif(!isSilent, notify(task.notifyOptions)));
+    return pipeline([
+        gulp.src(task.src),
+        changed(task.dest),
+        imagemin([
+            imagemin.gifsicle(task.imageminOptions.gif),
+            imagemin.jpegtran(task.imageminOptions.jpg),
+            imagemin.optipng(task.imageminOptions.png),
+            imagemin.svgo(task.imageminOptions.svg)
+        ]),
+        gulpif(!isSilent, notify(task.notifyOptions)),
+        gulp.dest(task.dest)
+    ], errorFormatter);
 };
 
 
@@ -109,47 +105,29 @@ function image () {
  * @return {function} - See: https://github.com/gulpjs/gulp/issues/2039
  */
 function createJsModule (task) {
-    return pump([
+    return pipeline([
         gulp.src(task.src, { sourcemaps: true }),
         uglify(task.uglifyOptions),
         concat(task.file),
-        gulp.dest(task.dest, { sourcemaps: true }),
-        gulpif(!isSilent, notify(task.notifyOptions))
-    ], errorHandler);
+        gulpif(!isSilent, notify(task.notifyOptions)),
+        gulp.dest(task.dest, { sourcemaps: true })
+    ], errorFormatter);
 }
 
-function jsAppPost (cb) {
-    createJsModule(config.task.jsAppPost);
-    cb();
+function jsAppPost () {
+    return createJsModule(config.task.jsAppPost);
 }
 
-function jsAppPostDefer (cb) {
-    createJsModule(config.task.jsAppPostDefer);
-    cb();
+function jsAppPostDefer () {
+    return createJsModule(config.task.jsAppPostDefer);
 }
 
-function jsAppPre (cb) {
-    createJsModule(config.task.jsAppPre);
-    cb();
+function jsAppPre () {
+    return createJsModule(config.task.jsAppPre);
 }
 
-// function jsThing (cb) {
-//     createJsModule(config.task.jsThing);
-//     cb();
-// }
-
-function jsThing (cb) {
-    var task = config.task.jsThing;
-
-    pump([
-        gulp.src(task.src, { sourcemaps: true }),
-        uglify(task.uglifyOptions),
-        concat(task.file),
-        gulp.dest(task.dest, { sourcemaps: true }),
-        gulpif(!isSilent, notify(task.notifyOptions))
-    ], errorHandler);
-
-    cb();
+function jsThing () {
+    return createJsModule(config.task.jsThing);
 }
 
 
@@ -160,16 +138,16 @@ function jsThing (cb) {
 function lintCss () {
     var task = config.task.lintCss;
 
-    return gulp
-    .src(task.src)
-    .pipe(stylelint({
-        reporters: [{
-            formatter: 'string',
-            console: true
-        }]
-    }))
-    .on('error', errorHandler)
-    .pipe(gulpif(!isSilent, notify(task.notifyOptions)));
+    return pipeline([
+        gulp.src(task.src),
+        stylelint({
+            reporters: [{
+                formatter: 'string',
+                console: true
+            }]
+        }),
+        gulpif(!isSilent, notify(task.notifyOptions))
+    ], errorFormatter);
 };
 
 
@@ -180,13 +158,13 @@ function lintCss () {
 function lintJs () {
     var task = config.task.lintJs;
 
-    return gulp
-    .src(task.src)
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failOnError())
-    .on('error', errorHandler)
-    .pipe(gulpif(!isSilent, notify(task.notifyOptions)));
+    return pipeline([
+        gulp.src(task.src),
+        eslint(),
+        eslint.format(),
+        eslint.failOnError(),
+        gulpif(!isSilent, notify(task.notifyOptions))
+    ], errorFormatter);
 };
 
 
@@ -195,17 +173,20 @@ function lintJs () {
 // ==============================================
 
 function watch () {
+    var opts = {
+        ignoreInitial: false
+    };
     // CSS
-    gulp.watch(config.task.css.src, gulp.parallel(lintCss, css));
+    gulp.watch(config.task.css.src, opts, gulp.parallel(lintCss, css));
 
     // Image
-    gulp.watch(config.task.image.src, gulp.parallel(image));
+    gulp.watch(config.task.image.src, opts, gulp.parallel(image));
 
     // JS
-    gulp.watch(config.task.jsAppPre.src,       gulp.parallel(lintJs, jsAppPre));
-    gulp.watch(config.task.jsAppPost.src,      gulp.parallel(lintJs, jsAppPost));
-    gulp.watch(config.task.jsAppPostDefer.src, gulp.parallel(lintJs, jsAppPostDefer));
-    gulp.watch(config.task.jsThing.src,        gulp.parallel(lintJs, jsThing));
+    gulp.watch(config.task.jsAppPre.src,       opts, gulp.parallel(lintJs, jsAppPre));
+    gulp.watch(config.task.jsAppPost.src,      opts, gulp.parallel(lintJs, jsAppPost));
+    gulp.watch(config.task.jsAppPostDefer.src, opts, gulp.parallel(lintJs, jsAppPostDefer));
+    gulp.watch(config.task.jsThing.src,        opts, gulp.parallel(lintJs, jsThing));
 }
 
 
@@ -233,4 +214,4 @@ exports.js      = js;
 exports.lint    = lint;
 exports.lintCss = lintCss;
 exports.lintJs  = lintJs;
-exports.watch   = gulp.parallel(defaultPlan, watch);
+exports.watch   = gulp.series(clean, watch);
