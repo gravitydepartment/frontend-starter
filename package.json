@@ -26,7 +26,7 @@
     "gulp-stylelint": "8.0.0",
     "gulp-uglify": "3.0.1",
     "minimist": "1.2.0",
-    "pump": "3.0.0",
+    "plugin-error": "^1.0.1",
     "stylelint": "9.10.1",
     "stylelint-scss": "3.5.4"
   }
