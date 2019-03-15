@@ -11,9 +11,9 @@
     ">1%"
   ],
   "devDependencies": {
-    "ansi-colors": "3.2.3",
+    "ansi-colors": "3.2.4",
     "beeper": "1.1.1",
-    "del": "3.0.0",
+    "del": "4.0.0",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "6.0.0",
     "gulp-changed": "3.2.0",
@@ -24,9 +24,9 @@
     "gulp-notify": "3.2.0",
     "gulp-sass": "4.0.2",
     "gulp-stylelint": "8.0.0",
-    "gulp-uglify": "3.0.1",
+    "gulp-uglify": "3.0.2",
     "minimist": "1.2.0",
-    "plugin-error": "^1.0.1",
+    "plugin-error": "1.0.1",
     "stylelint": "9.10.1",
     "stylelint-scss": "3.5.4"
   }
