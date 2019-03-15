@@ -53,8 +53,7 @@ var isSilent  = (arguments.silent) ? true : false;
  * @return {promise}
  */
 function clean () {
-    var task = config.task.clean;
-    return del(task.pathsToDelete);
+    return del(config.task.clean.pathsToDelete);
 };
 
 
