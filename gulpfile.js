@@ -114,21 +114,10 @@ function createJsModule (task) {
     ], errorFormatter);
 }
 
-function jsAppPost () {
-    return createJsModule(config.task.jsAppPost);
-}
-
-function jsAppPostDefer () {
-    return createJsModule(config.task.jsAppPostDefer);
-}
-
-function jsAppPre () {
-    return createJsModule(config.task.jsAppPre);
-}
-
-function jsThing () {
-    return createJsModule(config.task.jsThing);
-}
+var jsAppPost      = () => createJsModule(config.task.jsAppPost);
+var jsAppPostDefer = () => createJsModule(config.task.jsAppPostDefer);
+var jsAppPre       = () => createJsModule(config.task.jsAppPre);
+var jsThing        = () => createJsModule(config.task.jsThing);
 
 
 // ==============================================
