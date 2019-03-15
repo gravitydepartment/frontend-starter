@@ -8,23 +8,26 @@
 
 
 // ==============================================
-// Gulp Error Handler
+// Gulp Error Formatter
 // ==============================================
 
-// An error handler that uses "pump" to keep errors from ending streams.
+// An error formatter that uses Node "stream.pipeline" to keep errors from ending streams.
 // Each plugin may have unique error objects, so the response is normalized.
-//
-// See: https://github.com/mikaelbr/gulp-notify/issues/81
-// See: https://github.com/terinjokes/gulp-uglify/blob/master/docs/why-use-pump/README.md
 
-var beeper = require('beeper');
-var color  = require('ansi-colors');
-var minimist = require('minimist');
-var notify = require('gulp-notify');
+var beeper      = require('beeper');
+var color       = require('ansi-colors');
+var minimist    = require('minimist');
+var notify      = require('gulp-notify');
 var PluginError = require('plugin-error');
 
-var arguments = minimist(process.argv.slice(2));
+// ----------------------------------------------
+// Arguments
+
+var arguments      = minimist(process.argv.slice(2));
 var showProperties = (arguments['show-properties']) ? true : false;
+
+// ----------------------------------------------
+// Module
 
 module.exports = function (error) {
     if (typeof error !== 'undefined') {
@@ -72,7 +75,7 @@ module.exports = function (error) {
         }
 
         // ----------------------------------------------
-        // Fire Mac/Windows notification for error
+        // Show Mac/Windows notification
 
         notify({
             title:   'Failed Gulp — See Console',
@@ -82,10 +85,14 @@ module.exports = function (error) {
 
         beeper(); // Fallback to system sound (for Windows).
 
+        // ----------------------------------------------
+        // Throw error
+
         var customError = new PluginError(error.plugin, report.join(''), {
             error: error,
             showProperties: showProperties
         });
+
         throw customError;
     }
 };

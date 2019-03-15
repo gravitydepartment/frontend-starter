@@ -27,11 +27,12 @@ var stylelint    = require('gulp-stylelint');
 var uglify       = require('gulp-uglify');
 
 // GravDept modules
-var config       = require('./gulp/config.js');
+var config         = require('./gulp/config');
 var errorFormatter = require('./gulp/error-formatter');
 
+
 // ==============================================
-// Notifications
+// Arguments
 // ==============================================
 
 // Run "gulp" without arguments for helpful dev notifications.
@@ -173,20 +174,21 @@ function lintJs () {
 // ==============================================
 
 function watch () {
-    var opts = {
+    var options = {
         ignoreInitial: false
     };
+
     // CSS
-    gulp.watch(config.task.css.src, opts, gulp.parallel(lintCss, css));
+    gulp.watch(config.task.css.src, options, gulp.parallel(lintCss, css));
 
     // Image
-    gulp.watch(config.task.image.src, opts, gulp.parallel(image));
+    gulp.watch(config.task.image.src, options, gulp.parallel(image));
 
     // JS
-    gulp.watch(config.task.jsAppPre.src,       opts, gulp.parallel(lintJs, jsAppPre));
-    gulp.watch(config.task.jsAppPost.src,      opts, gulp.parallel(lintJs, jsAppPost));
-    gulp.watch(config.task.jsAppPostDefer.src, opts, gulp.parallel(lintJs, jsAppPostDefer));
-    gulp.watch(config.task.jsThing.src,        opts, gulp.parallel(lintJs, jsThing));
+    gulp.watch(config.task.jsAppPre.src,       options, gulp.parallel(lintJs, jsAppPre));
+    gulp.watch(config.task.jsAppPost.src,      options, gulp.parallel(lintJs, jsAppPost));
+    gulp.watch(config.task.jsAppPostDefer.src, options, gulp.parallel(lintJs, jsAppPostDefer));
+    gulp.watch(config.task.jsThing.src,        options, gulp.parallel(lintJs, jsThing));
 }
 
 
