@@ -162,21 +162,19 @@ function lintJs () {
 // ==============================================
 
 function watch () {
-    var options = {
-        ignoreInitial: false
-    };
+    var task = config.task.watch;
 
     // CSS
-    gulp.watch(config.task.css.src, options, gulp.parallel(lintCss, css));
+    gulp.watch(config.task.css.src, task.options, gulp.parallel(lintCss, css));
 
     // Image
-    gulp.watch(config.task.image.src, options, gulp.parallel(image));
+    gulp.watch(config.task.image.src, task.options, gulp.parallel(image));
 
     // JS
-    gulp.watch(config.task.jsAppPre.src,       options, gulp.parallel(lintJs, jsAppPre));
-    gulp.watch(config.task.jsAppPost.src,      options, gulp.parallel(lintJs, jsAppPost));
-    gulp.watch(config.task.jsAppPostDefer.src, options, gulp.parallel(lintJs, jsAppPostDefer));
-    gulp.watch(config.task.jsThing.src,        options, gulp.parallel(lintJs, jsThing));
+    gulp.watch(config.task.jsAppPre.src,       task.options, gulp.parallel(lintJs, jsAppPre));
+    gulp.watch(config.task.jsAppPost.src,      task.options, gulp.parallel(lintJs, jsAppPost));
+    gulp.watch(config.task.jsAppPostDefer.src, task.options, gulp.parallel(lintJs, jsAppPostDefer));
+    gulp.watch(config.task.jsThing.src,        task.options, gulp.parallel(lintJs, jsThing));
 }
 
 

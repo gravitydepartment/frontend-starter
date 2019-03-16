@@ -182,6 +182,11 @@ var task = {
             path.assets + 'js/src/**/*.js',
             '!' + path.assets + 'js/src/vendor/**'
         ]
+    },
+    watch: {
+        options: {
+            ignoreInitial: false
+        }
     }
 };
 
