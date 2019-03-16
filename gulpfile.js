@@ -35,11 +35,10 @@ var errorFormatter = require('./gulp/error-formatter');
 // Arguments
 // ==============================================
 
-// Run "gulp" without arguments for helpful dev notifications.
-// Run "gulp --silent" to suppress notifications on the server.
+var arguments    = minimist(process.argv.slice(2));
 
-var arguments = minimist(process.argv.slice(2));
-var isSilent  = (arguments.silent) ? true : false;
+// Use "gulp --hide-notify" to suppress Mac/Windows notifications.
+var hideNotify = (arguments['hide-notify']) ? true : false;
 
 
 // ==============================================
@@ -68,7 +67,7 @@ function css () {
         gulp.src(task.src, { sourcemaps: true }),
         sass(task.sassOptions),
         autoprefixer(task.autoprefixerOptions),
-        gulpif(!isSilent, notify(task.notifyOptions)),
+        gulpif(!hideNotify, notify(task.notifyOptions)),
         gulp.dest(task.dest, { sourcemaps: task.mapDest })
     ], errorFormatter);
 };
@@ -90,7 +89,7 @@ function image () {
             imagemin.optipng(task.imageminOptions.png),
             imagemin.svgo(task.imageminOptions.svg)
         ]),
-        gulpif(!isSilent, notify(task.notifyOptions)),
+        gulpif(!hideNotify, notify(task.notifyOptions)),
         gulp.dest(task.dest)
     ], errorFormatter);
 };
@@ -109,7 +108,7 @@ function createJsModule (task) {
         gulp.src(task.src, { sourcemaps: true }),
         uglify(task.uglifyOptions),
         concat(task.file),
-        gulpif(!isSilent, notify(task.notifyOptions)),
+        gulpif(!hideNotify, notify(task.notifyOptions)),
         gulp.dest(task.dest, { sourcemaps: true })
     ], errorFormatter);
 }
@@ -135,7 +134,7 @@ function lintCss () {
                 console: true
             }]
         }),
-        gulpif(!isSilent, notify(task.notifyOptions))
+        gulpif(!hideNotify, notify(task.notifyOptions))
     ], errorFormatter);
 };
 
@@ -152,7 +151,7 @@ function lintJs () {
         eslint(),
         eslint.format(),
         eslint.failOnError(),
-        gulpif(!isSilent, notify(task.notifyOptions))
+        gulpif(!hideNotify, notify(task.notifyOptions))
     ], errorFormatter);
 };
 
