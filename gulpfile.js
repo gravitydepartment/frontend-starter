@@ -68,8 +68,8 @@ function css () {
         gulp.src(task.src, { sourcemaps: true }),
         sass(task.sassOptions),
         autoprefixer(task.autoprefixerOptions),
-        gulp.dest(task.dest, { sourcemaps: task.mapDest }),
-        gulpif(!isSilent, notify(task.notifyOptions))
+        gulpif(!isSilent, notify(task.notifyOptions)),
+        gulp.dest(task.dest, { sourcemaps: task.mapDest })
     ], errorFormatter);
 };
 
