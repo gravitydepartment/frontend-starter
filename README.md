@@ -90,7 +90,7 @@ Sometimes updating fails or breaks the build. Before reverting to prior versions
 
 1. Delete the `/node-modules` folder.
 1. Run `npm install`.
-1.Test the build again.
+1. Test the build again.
 
 #### Update build tools
 
