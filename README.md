@@ -53,9 +53,9 @@ Gulp powers the frontend build system. All the frontend assets (CSS, JS, images)
 | css | Pre-process SCSS to CSS.<br> Process SCSS to sourcemaps.<br> Post-process CSS with Autoprefixer. |
 | default | Run "clean" to force all site assets to be regenerated.<br> Run all specified tasks and linters (css, image, js). |
 | image | Optimize image files (JPG, PNG, GIF, SVG) using ImageOptim library. |
-| js{ModuleName} | Compress JS without mangling (rewriting for shortness).<br> Concatenate into bundles.<br> Process JS to sourcemaps. |
+| js{BundleName} | Compress JS without mangling (rewriting for shortness).<br> Concatenate into bundles.<br> Process JS to sourcemaps. |
 | lintCss | Lint CSS with "stylelint" module.<br> This runs in "default" and anytime a watched CSS file is changed. |
-| lintJs | Lint JS with "jsHint" module.<br> This runs in "default" and anytime a watched JS file is | changed.
+| lintJs | Lint JS with "ESLint" module.<br> This runs in "default" and anytime a watched JS file is | changed.
 | watch | Run "default" immediately.<br> Start watchers for appropriate tasks. |
 
 #### Install build tools

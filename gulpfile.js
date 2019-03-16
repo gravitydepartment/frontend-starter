@@ -96,14 +96,14 @@ function image () {
 
 
 // ==============================================
-// JS Modules
+// JS
 // ==============================================
 
 /**
  * @param {object} task - Task config object like `config.task.taskName`
  * @return {function} - See: https://github.com/gulpjs/gulp/issues/2039
  */
-function createJsModule (task) {
+function bundleJs (task) {
     return pipeline([
         gulp.src(task.src, { sourcemaps: true }),
         uglify(task.uglifyOptions),
@@ -113,10 +113,10 @@ function createJsModule (task) {
     ], errorFormatter);
 }
 
-var jsAppPost      = () => createJsModule(config.task.jsAppPost);
-var jsAppPostDefer = () => createJsModule(config.task.jsAppPostDefer);
-var jsAppPre       = () => createJsModule(config.task.jsAppPre);
-var jsThing        = () => createJsModule(config.task.jsThing);
+var jsAppPost      = () => bundleJs(config.task.jsAppPost);
+var jsAppPostDefer = () => bundleJs(config.task.jsAppPostDefer);
+var jsAppPre       = () => bundleJs(config.task.jsAppPre);
+var jsThing        = () => bundleJs(config.task.jsThing);
 
 
 // ==============================================

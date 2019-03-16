@@ -73,7 +73,7 @@ var task = {
     },
     jsAppPost: {
         dest: path.assets + 'js/build',
-        file: 'module-app-post.min.js',
+        file: 'bundle-app-post.min.js',
         mapDest: '../map',
         notifyOptions: {
             title: 'JS: Module: App Post',
@@ -114,7 +114,7 @@ var task = {
     },
     jsAppPostDefer: {
         dest: path.assets + 'js/build',
-        file: 'module-app-post-defer.min.js',
+        file: 'bundle-app-post-defer.min.js',
         mapDest: '../map',
         notifyOptions: {
             title: 'JS: Module: App Post Defer',
@@ -130,7 +130,7 @@ var task = {
     },
     jsAppPre: {
         dest: path.assets + 'js/build',
-        file: 'module-app-pre.min.js',
+        file: 'bundle-app-pre.min.js',
         mapDest: '../map',
         notifyOptions: {
             title: 'JS: Module: App Pre',
@@ -146,7 +146,7 @@ var task = {
     },
     jsThing: {
         dest: path.assets + 'js/build',
-        file: 'module-thing.min.js',
+        file: 'bundle-thing.min.js',
         mapDest: '../map',
         notifyOptions: {
             title: 'JS: Module: Thing',
