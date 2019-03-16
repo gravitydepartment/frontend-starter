@@ -109,7 +109,7 @@ function bundleJs (task) {
         uglify(task.uglifyOptions),
         concat(task.file),
         gulpif(!hideNotify, notify(task.notifyOptions)),
-        gulp.dest(task.dest, { sourcemaps: true })
+        gulp.dest(task.dest, { sourcemaps: task.mapDest })
     ], errorFormatter);
 }
 
