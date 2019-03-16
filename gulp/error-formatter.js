@@ -7,12 +7,20 @@
 */
 
 
-// ==============================================
+// **********************************************
 // Gulp Error Formatter
-// ==============================================
+//
+// Plugins return inconsistent `error` objects. This module:
+//
+// - Uses Node "stream.pipeline" to keep errors from ending streams.
+// - Normalizes and formats the error, so the console is readable.
+// - Shows Mac/Windows notifications with file + line number hints.
+// **********************************************
 
-// An error formatter that uses Node "stream.pipeline" to keep errors from ending streams.
-// Each plugin may have unique error objects, so the response is normalized.
+
+// ==============================================
+// Packages
+// ==============================================
 
 var beeper      = require('beeper');
 var color       = require('ansi-colors');
@@ -20,14 +28,20 @@ var minimist    = require('minimist');
 var notify      = require('gulp-notify');
 var PluginError = require('plugin-error');
 
-// ----------------------------------------------
-// Arguments
 
-var arguments      = minimist(process.argv.slice(2));
+// ==============================================
+// Arguments
+// ==============================================
+
+var arguments = minimist(process.argv.slice(2));
+
+// Use "gulp --show-properties" to log detailed error info in the console.
 var showProperties = (arguments['show-properties']) ? true : false;
 
-// ----------------------------------------------
+
+// ==============================================
 // Module
+// ==============================================
 
 module.exports = function (error) {
     if (typeof error !== 'undefined') {

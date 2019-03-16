@@ -74,6 +74,7 @@ Gulp powers the frontend build system. All the frontend assets (CSS, JS, images)
 | `gulp watch` | Run "default" task and continue watching |
 | `gulp {taskName}` | Run a specific task |
 | `gulp --hide-notify` | Run "default" task (once) and suppress Mac/Windows notifications |
+| `gulp --show-properties` | Run "default" task (once) and log detailed error info in the console |
 
 #### Maintain build tools
 
