@@ -170,7 +170,13 @@ var task = {
             path.assets + 'css/src/**/*.scss',
             '!' + path.assets + 'css/src/core/reset/_normalize.scss',
             '!' + path.assets + 'css/src/vendor/**'
-        ]
+        ],
+        stylelintOptions: {
+            reporters: [{
+                formatter: 'string',
+                console: true
+            }]
+        }
     },
     lintJs: {
         notifyOptions: {

@@ -128,12 +128,7 @@ function lintCss () {
 
     return pipeline([
         gulp.src(task.src),
-        stylelint({
-            reporters: [{
-                formatter: 'string',
-                console: true
-            }]
-        }),
+        stylelint(task.stylelintOptions),
         gulpif(!hideNotify, notify(task.notifyOptions))
     ], errorFormatter);
 };
