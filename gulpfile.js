@@ -12,7 +12,6 @@
 // ==============================================
 
 var autoprefixer = require('gulp-autoprefixer');
-var changed      = require('gulp-changed');
 var concat       = require('gulp-concat');
 var del          = require('del');
 var eslint       = require('gulp-eslint');
@@ -35,7 +34,7 @@ var errorFormatter = require('./gulp/error-formatter');
 // Arguments
 // ==============================================
 
-var arguments    = minimist(process.argv.slice(2));
+var arguments = minimist(process.argv.slice(2));
 
 // Use "gulp --hide-notify" to suppress Mac/Windows notifications.
 var hideNotify = (arguments['hide-notify']) ? true : false;
@@ -81,8 +80,7 @@ function image () {
     var task = config.task.image;
 
     return pipeline([
-        gulp.src(task.src),
-        changed(task.dest),
+        gulp.src(task.src, { since: gulp.lastRun(image) }),
         imagemin([
             imagemin.gifsicle(task.imageminOptions.gif),
             imagemin.jpegtran(task.imageminOptions.jpg),

@@ -10,13 +10,13 @@
     "last 2 versions",
     ">1%"
   ],
+  "dependencies": {},
   "devDependencies": {
     "ansi-colors": "3.2.4",
     "beeper": "1.1.1",
     "del": "4.0.0",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "6.0.0",
-    "gulp-changed": "3.2.0",
     "gulp-concat": "2.6.1",
     "gulp-eslint": "5.0.0",
     "gulp-if": "2.0.2",
