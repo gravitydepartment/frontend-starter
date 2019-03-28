@@ -32,6 +32,7 @@ var sidescroll = {
                 },
                 unmatch: function () {
                     $self.attr('data-sidescroll', 'scroll');
+                    $self.find('.sidescroll_liner').first().scrollLeft(0);
                 }
             });
         });
