@@ -76,7 +76,7 @@ var task = {
         file: 'bundle-app-post.js',
         mapDest: '../map',
         notifyOptions: {
-            title: 'JS: Module: App Post',
+            title: 'JS: App Post',
             message: 'Done',
             onLast: true
         },
@@ -117,7 +117,7 @@ var task = {
         file: 'bundle-app-post-defer.js',
         mapDest: '../map',
         notifyOptions: {
-            title: 'JS: Module: App Post Defer',
+            title: 'JS: App Post Defer',
             message: 'Done',
             onLast: true
         },
@@ -133,7 +133,7 @@ var task = {
         file: 'bundle-app-pre.js',
         mapDest: '../map',
         notifyOptions: {
-            title: 'JS: Module: App Pre',
+            title: 'JS: App Pre',
             message: 'Done',
             onLast: true
         },
@@ -149,7 +149,7 @@ var task = {
         file: 'bundle-thing.js',
         mapDest: '../map',
         notifyOptions: {
-            title: 'JS: Module: Thing',
+            title: 'JS: Thing',
             message: 'Done',
             onLast: true
         },
