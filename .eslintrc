@@ -29,8 +29,8 @@
             "error",
             "except-parens"
         ],
-        "no-loop-func": "error",
         "no-eval": "error",
+        "no-loop-func": "error",
         "no-shadow": "off",
         "no-undef": "off",
         "no-unused-expressions": "error"
