@@ -14,7 +14,7 @@
 var $tabAccordions = jQuery('.tab-accordion');
 
 // If changed, also change CSS.
-// See: /css/src/component/tab-accordion.scss
+// See: /css/src/component/_tab-accordion.scss
 var tabAccordionBreakpoint = 800;
 
 $tabAccordions.each(function () {
