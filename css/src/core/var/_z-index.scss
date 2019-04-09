@@ -57,15 +57,15 @@ $z-menu-arrow-fill:   302 !default;
 
 
 // ==============================================
-// 400 - Notify
+// 400 - Modal
 // ==============================================
 
-$z-notify: 400 !default;
+$z-modal-backdrop: 400 !default;
+$z-modal-dialog:   401 !default;
 
 
 // ==============================================
-// 500 - Modal
+// 500 - Notify
 // ==============================================
 
-$z-modal-backdrop: 500 !default;
-$z-modal-dialog:   501 !default;
+$z-notify: 500 !default;
