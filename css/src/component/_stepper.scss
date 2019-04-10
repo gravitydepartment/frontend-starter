@@ -78,7 +78,7 @@ $stepper-input-size-l:    70px !default;
     text-align: center;
 
     &:focus {
-        border-color: $c-input-focus;
+        border-color: $c-input-focus-base;
         box-shadow: $box-shadow-input-text;
     }
 }

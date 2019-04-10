@@ -146,8 +146,19 @@ $c-action-help-active: darken($c-help-background, 4%) !default;
 // ==============================================
 
 $c-input-border:      #C0C0C0          !default;
-$c-input-focus:       #B4DEFA          !default;
+$c-input-focus-base:  #B4DEFA          !default;
 $c-input-focus-error: $c-library-red-2 !default;
+
+
+// ==============================================
+// Link Colors
+// ==============================================
+
+$c-link-base:    $c-blue-base !default;
+$c-link-hover:   $c-blue-mid  !default;
+$c-link-focus:   $c-blue-mid  !default;
+$c-link-active:  $c-blue-mid  !default;
+$c-link-visited: $c-blue-base !default;
 
 
 // ==============================================
