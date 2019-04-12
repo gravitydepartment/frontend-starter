@@ -35,8 +35,8 @@ $gap: $space-xxl !default;
 $gutter: $space-base !default;
 
 // Liner is the whitespace between the content box and content.
-$liner-base: 15px !default;
-$liner-l:    30px !default; // min-width: 900px
+$liner-base: $space-base !default;
+$liner-l:    $space-xxl  !default; // min-width: 900px
 
 // Trim is the whitespace between the content and viewport edge.
 $trim-base: $space-base !default;
