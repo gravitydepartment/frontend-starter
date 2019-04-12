@@ -2,8 +2,8 @@
 * Gravity Department - App UI
 * https://github.com/gravitydepartment/app-ui
 *
-* @author     Brendan Falkowski
-* @copyright  2018 Gravity Department. All rights reserved.
+* @author    Brendan Falkowski
+* @copyright Gravity Department. All rights reserved.
 */
 
 
