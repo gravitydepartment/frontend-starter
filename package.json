@@ -13,8 +13,8 @@
   "dependencies": {},
   "devDependencies": {
     "ansi-colors": "3.2.4",
-    "beeper": "1.1.1",
-    "del": "4.0.0",
+    "beeper": "2.0.0",
+    "del": "4.1.0",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "6.0.0",
     "gulp-concat": "2.6.1",
