@@ -15,19 +15,19 @@
     "ansi-colors": "3.2.4",
     "beeper": "2.0.0",
     "del": "4.1.0",
-    "gulp": "4.0.0",
-    "gulp-autoprefixer": "6.0.0",
+    "gulp": "4.0.1",
+    "gulp-autoprefixer": "6.1.0",
     "gulp-concat": "2.6.1",
     "gulp-eslint": "5.0.0",
     "gulp-if": "2.0.2",
     "gulp-imagemin": "5.0.3",
     "gulp-notify": "3.2.0",
     "gulp-sass": "4.0.2",
-    "gulp-stylelint": "8.0.0",
+    "gulp-stylelint": "9.0.0",
     "gulp-uglify": "3.0.2",
     "minimist": "1.2.0",
     "plugin-error": "1.0.1",
-    "stylelint": "9.10.1",
-    "stylelint-scss": "3.5.4"
+    "stylelint": "10.0.1",
+    "stylelint-scss": "3.6.0"
   }
 }
