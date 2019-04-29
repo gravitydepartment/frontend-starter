@@ -1,8 +1,8 @@
+[![Gravity Department](https://cdn.gravitydept.com/github/repo-header.png)](https://gravitydept.com/)
+
 # GravDept Frontend Starter
 
 A simple HTML + CSS + JS baseline with Gulp build tools.
-
-[![Gravity Department](http://gravitydept.com/_themes/gravdept/img/logo-footer.png)](http://gravitydept.com/)
 
 ## Quick start
 
