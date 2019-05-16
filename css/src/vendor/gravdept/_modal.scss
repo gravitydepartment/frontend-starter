@@ -158,9 +158,9 @@ $z-modal-dialog:   901 !default;
 .modal_header h2,
 .modal_header h3,
 .modal_header h4,
-.modal_header h5, {
+.modal_header h5 {
     margin: 0;
-    font-size: $font-size-xxl;
+    font-size: $font-size-xl;
     font-style: normal;
     font-weight: bold;
     line-height: $line-height-s;
