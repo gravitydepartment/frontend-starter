@@ -70,8 +70,18 @@ Typeahead.prototype = {
         this.$input.on('keydown', function (e) {
             // Press "tab" to focus the first typeahead link
             if (e.keyCode === 9) {
-                e.preventDefault(); // Don't tab to "submit" button
-                _this.$response.find('.typeahead_link').first().focus();
+                var $typeaheadLinks = _this.$response.find('.typeahead_link');
+
+                // Check if tabbing to typeahead links is possible.
+                if ($typeaheadLinks.length) {
+                    // Prevent tabbing to the "submit" button.
+                    e.preventDefault();
+                    // And focus the first link.
+                    $typeaheadLinks.first().focus();
+                } else {
+                    // No typeahead links are tabbable.
+                    // So allow tabbing to the "submit" button.
+                }
             }
         });
 
