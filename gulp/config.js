@@ -83,6 +83,7 @@ var task = {
         src: [
             // Polyfills
             path.assets + 'js/src/vendor/polyfill-custom-event.js',
+            path.assets + 'js/src/vendor/polyfill-element-closest.js',
             path.assets + 'js/src/vendor/polyfill-object-assign.js',
             // Libraries
             path.assets + 'js/src/vendor/jquery-3.3.1.min.js',
@@ -91,7 +92,7 @@ var task = {
             path.assets + 'js/src/vendor/fitvids.js',
             path.assets + 'js/src/vendor/gravdept/accordion.js',
             path.assets + 'js/src/vendor/gravdept/app-ui.js',
-            path.assets + 'js/src/vendor/gravdept/modal.js', // Needs: polyfill-custom-event.js, polyfill-object-assign.js
+            path.assets + 'js/src/vendor/gravdept/modal.js', // Needs: polyfill-custom-event.js, polyfill-element-closest.js, polyfill-object-assign.js
             path.assets + 'js/src/vendor/gravdept/notify.js',
             path.assets + 'js/src/vendor/gravdept/offscreen.js',
             path.assets + 'js/src/vendor/gravdept/sidescroll.js', // Needs: enquire.js

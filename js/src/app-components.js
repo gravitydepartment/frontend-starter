@@ -25,12 +25,13 @@ appUi.init();
 // ==============================================
 
 document.addEventListener('click', function (e) {
-    if (e.target && e.target.matches('[data-modal-trigger]')) {
+    if (e.target && e.target.closest('[data-modal-trigger]')) {
         e.preventDefault();
 
-        var config = {};
-        var modal  = e.target.getAttribute('data-modal-trigger');
-        var width  = e.target.getAttribute('data-modal-width');
+        var trigger = e.target.closest('[data-modal-trigger]');
+        var config  = {};
+        var modal   = trigger.getAttribute('data-modal-trigger');
+        var width   = trigger.getAttribute('data-modal-width');
 
         config.content = document.querySelector('[data-modal="' + modal + '"]').innerHTML;
 
