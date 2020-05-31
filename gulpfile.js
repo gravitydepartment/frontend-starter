@@ -83,7 +83,7 @@ function image () {
         gulp.src(task.src, { since: gulp.lastRun(image) }),
         imagemin([
             imagemin.gifsicle(task.imageminOptions.gif),
-            imagemin.jpegtran(task.imageminOptions.jpg),
+            imagemin.mozjpeg(task.imageminOptions.jpg),
             imagemin.optipng(task.imageminOptions.png),
             imagemin.svgo(task.imageminOptions.svg)
         ]),
