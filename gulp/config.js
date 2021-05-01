@@ -32,10 +32,11 @@ var task = {
         },
         dest: path.assets + 'css/build',
         mapDest: '../map',
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notifyOptions: {
-            title: 'CSS',
-            message: 'Done',
-            onLast: true
+            "title": "CSS",
+            "message": "Done",
+            "onLast": true
         },
         sassOptions: {
             outputStyle: 'compressed'
@@ -62,10 +63,11 @@ var task = {
                 ]
             }
         },
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notifyOptions: {
-            title: 'Image',
-            message: 'Done',
-            onLast: true
+            "title": "Image",
+            "message": "Done",
+            "onLast": true
         },
         src: [
             path.assets + 'img/src/**/*'
@@ -75,10 +77,11 @@ var task = {
         dest: path.assets + 'js/build',
         file: 'bundle-app-post.js',
         mapDest: '../map',
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notifyOptions: {
-            title: 'JS: App Post',
-            message: 'Done',
-            onLast: true
+            "title": "JS: App Post",
+            "message": "Done",
+            "onLast": true
         },
         src: [
             // Polyfills
@@ -117,10 +120,11 @@ var task = {
         dest: path.assets + 'js/build',
         file: 'bundle-app-post-defer.js',
         mapDest: '../map',
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notifyOptions: {
-            title: 'JS: App Post Defer',
-            message: 'Done',
-            onLast: true
+            "title": "JS: App Post Defer",
+            "message": "Done",
+            "onLast": true
         },
         src: [
             path.assets + 'js/src/vendor/picturefill.min.js' // For IE11
@@ -133,10 +137,11 @@ var task = {
         dest: path.assets + 'js/build',
         file: 'bundle-app-pre.js',
         mapDest: '../map',
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notifyOptions: {
-            title: 'JS: App Pre',
-            message: 'Done',
-            onLast: true
+            "title": "JS: App Pre",
+            "message": "Done",
+            "onLast": true
         },
         src: [
             path.assets + 'js/src/vendor/modernizr.custom.js'
@@ -149,10 +154,11 @@ var task = {
         dest: path.assets + 'js/build',
         file: 'bundle-thing.js',
         mapDest: '../map',
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notifyOptions: {
-            title: 'JS: Thing',
-            message: 'Done',
-            onLast: true
+            "title": "JS: Thing",
+            "message": "Done",
+            "onLast": true
         },
         src: [
             path.assets + 'js/src/module/thing.js'
@@ -162,10 +168,11 @@ var task = {
         }
     },
     lintCss: {
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notifyOptions: {
-            title: 'Lint: CSS',
-            message: 'Done',
-            onLast: true
+            "title": "Lint: CSS",
+            "message": "Done",
+            "onLast": true
         },
         src: [
             path.assets + 'css/src/**/*.scss',
@@ -180,10 +187,11 @@ var task = {
         }
     },
     lintJs: {
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notifyOptions: {
-            title: 'Lint: JS',
-            message: 'Done',
-            onLast: true
+            "title": "Lint: JS",
+            "message": "Done",
+            "onLast": true
         },
         src: [
             path.assets + 'js/src/**/*.js',

@@ -13,21 +13,21 @@
   "dependencies": {},
   "devDependencies": {
     "ansi-colors": "^4.1.1",
-    "beeper": "^2.0.0",
-    "del": "^5.1.0",
+    "beeper": "^2.1.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
-    "gulp-notify": "^3.2.0",
+    "gulp-notify": "^4.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
     "minimist": "^1.2.5",
     "plugin-error": "^1.0.1",
-    "stylelint": "^13.5.0",
-    "stylelint-scss": "^3.17.2"
+    "stylelint": "^13.13.0",
+    "stylelint-scss": "^3.19.0"
   }
 }

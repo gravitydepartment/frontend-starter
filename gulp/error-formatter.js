@@ -97,10 +97,11 @@ module.exports = function (error) {
         // ----------------------------------------------
         // Show Mac/Windows notification
 
+        // Must be JSON. See: https://github.com/mikaelbr/gulp-notify/issues/129
         notify({
-            message: notifyMessage,
-            sound:   'Sosumi', // Sound for Mac. See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
-            title:   'Gulp Error — ' + notifyTitle
+            "message": notifyMessage,
+            "sound":   "Sosumi", // Sound for Mac. See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
+            "title":   "Gulp Error — " + notifyTitle
         }).write(error);
 
         beeper(); // Fallback to system sound (for Windows).

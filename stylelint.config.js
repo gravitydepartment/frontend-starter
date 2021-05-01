@@ -65,7 +65,7 @@ module.exports = {
         "custom-property-pattern": null,
         "declaration-block-no-redundant-longhand-properties": true,
         "declaration-no-important": true,
-        "declaration-property-unit-blacklist": {
+        "declaration-property-unit-disallowed-list": {
             "/^animation/": ["s"]
         },
         "declaration-property-unit-whitelist": null,
